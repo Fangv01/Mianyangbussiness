@@ -68,6 +68,7 @@ public class SecondActivity extends Activity {
         tv_user.setText(username);
         setDefaultFragment();
         BottomNavigationView navigationView = findViewById(R.id.navigation);
+        navigationView.setSelectedItemId(R.id.nv_work);
         navigationView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener);
     }
     @Override
