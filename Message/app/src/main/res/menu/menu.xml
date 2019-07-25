@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nv_message"
+        android:title="消息" />
+
+    <item
+        android:id="@+id/nv_address"
+        android:title="通讯录" />
+
+    <item
+        android:id="@+id/nv_work"
+        android:title="工作" />
+
+    <item
+        android:id="@+id/nv_calendar"
+        android:title="日程" />
+
+    <item
+        android:id="@+id/nv_my"
+        android:title="我的" />
+
+</menu>
