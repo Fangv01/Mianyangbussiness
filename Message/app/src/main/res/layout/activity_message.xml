@@ -1,6 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="10px" android:orientation="vertical">
+    - <LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView android:layout_width="0px"
+        android:layout_weight="1"
+        android:layout_height="200px"
+        android:gravity="center" android:textSize="50sp"
+        android:text="短信管理"
+        android:textColor="@color/colorPrimary"/>
+</LinearLayout>
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="150px"
+
+        >
+
+
+    </LinearLayout>
+    - <LinearLayout android:layout_width="match_parent"
+
+    android:layout_height="600px">
+    <Button android:id="@+id/offline_mss"
+        android:layout_width="0px"
+        android:layout_weight="8"
+        android:layout_height="500px"
+        android:text="手机短信"
+        android:textSize="45sp"
+        />
+    <TextView
+        android:id="@+id/send_mss"
+        android:layout_gravity="center"
+        android:layout_width="0px"
+        android:layout_weight="3" android:layout_height="500px"
+        android:text="\n发送短信\n\n我的短信\n\n草稿箱"
+
+        android:textSize="18sp"
+
+        />
+</LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="50px">
+
+
+
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button android:id="@+id/online_mss"
+            android:layout_width="0px"
+            android:layout_weight="8"
+            android:layout_height="500px"
+            android:text="内部短信"
+            android:textSize="45sp"/>
+        <TextView
+            android:id="@+id/wrt_mss"
+            android:layout_gravity="left"
+            android:layout_width="0px"
+            android:layout_weight="3" android:layout_height="500px"
+            android:text="\n写短信\n\n所有短信\n\n短信查询\n\n草稿箱"
+            android:textSize="18sp"
+
+            />
+    </LinearLayout>
 </LinearLayout>
