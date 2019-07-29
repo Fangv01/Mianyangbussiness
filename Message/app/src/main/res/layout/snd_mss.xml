@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="10px" android:orientation="vertical">
     - <LinearLayout android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -52,23 +55,32 @@
         android:id="@+id/send_mss"
         android:layout_width="match_parent"
                     android:orientation="horizontal"
-                    android:gravity="bottom"
+                    android:gravity="top"
                     android:layout_height="match_parent">
+
     <EditText
             android:id="@+id/mss"
             android:layout_width="0px"
+
               android:layout_weight="8"
-            android:hint="编辑短信内容"
-            android:textSize="15sp"
-              android:layout_height="180px"/>
-    <Button android:id="@+id/snd_mss"
-            android:layout_width="0px"
-android:layout_weight="3"
-            android:layout_height="180px"
-            android:text="发送短信"
+            android:hint="在此编辑短信内容"
+        android:gravity="top"
+        android:layout_gravity="bottom"
+            android:textSize="30sp"
+              android:layout_height="match_parent"/>
 
-            android:textSize="20sp"
+    <Button
+        android:id="@+id/snd_mss"
+        android:layout_width="0px"
 
-    ></Button>
+        android:layout_height="180px"
+        android:layout_weight="3"
+        android:text="发送短信"
+
+        android:textSize="20sp"
+
+        ></Button>
+
 </LinearLayout>
 </LinearLayout>
+</ScrollView>

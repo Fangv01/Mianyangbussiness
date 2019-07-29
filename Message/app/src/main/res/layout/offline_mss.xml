@@ -12,8 +12,9 @@
 
     - <LinearLayout android:layout_width="match_parent"
 android:orientation="vertical"
-                    android:gravity="center"
+                    android:gravity="top"
                     android:layout_height="match_parent">
+
     <Button android:id="@+id/snd_mss"
             android:layout_width="match_parent"
 
@@ -21,13 +22,22 @@ android:orientation="vertical"
             android:text="发送短信"
             android:textSize="45sp"
     />
-    <TextView android:layout_width="match_parent" android:layout_height="50dp"/>
+    <TextView android:layout_width="match_parent" android:layout_height="10dp"/>
+
     <Button android:id="@+id/my_mss"
               android:layout_width="match_parent"
 
               android:layout_height="400px"
               android:text="我的短信"
               android:textSize="45sp"
-></Button>
+/> <TextView android:layout_width="match_parent" android:layout_height="10dp"/>
+    <Button android:id="@+id/mng_box"
+        android:layout_width="match_parent"
+
+        android:layout_height="400px"
+        android:text="草稿箱"
+        android:textSize="45sp"
+        >
+    </Button>
 </LinearLayout>
 </LinearLayout>
