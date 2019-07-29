@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -45,6 +46,7 @@ public class SecondActivity extends Activity {
                     transaction.replace(R.id.content,new Fragment5());
                     transaction.commit();
                     return true;
+
             }
             return false;
         }
@@ -83,5 +85,9 @@ public class SecondActivity extends Activity {
         transaction.replace(R.id.content,new Fragment3());
         transaction.commit();
     }
+
+
+
+
 
 }

@@ -30,13 +30,14 @@
     - <LinearLayout android:layout_width="match_parent"
 
     android:layout_height="600px">
-    <Button android:id="@+id/offline_mss"
+
+    <Button
+        android:id="@+id/offline_mss"
         android:layout_width="0px"
-        android:layout_weight="8"
         android:layout_height="500px"
+        android:layout_weight="8"
         android:text="手机短信"
-        android:textSize="45sp"
-        />
+        android:textSize="45sp" />
     <TextView
         android:id="@+id/send_mss"
         android:layout_gravity="center"
@@ -57,7 +58,8 @@
     </LinearLayout>
     <LinearLayout android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <Button android:id="@+id/online_mss"
+        <Button
+            android:id="@+id/online_mss"
             android:layout_width="0px"
             android:layout_weight="8"
             android:layout_height="500px"

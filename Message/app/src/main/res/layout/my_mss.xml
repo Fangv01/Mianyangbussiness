@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
 
             android:layout_height="400px"
-            android:text="收件箱"
+            android:text="发件箱"
 
             android:textSize="45sp"/>
     <TextView android:layout_width="match_parent" android:layout_height="50dp"/>
@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
 
             android:layout_height="400px"
-            android:text="发件箱"
+            android:text="收件箱"
 
             android:textSize="45sp"
 

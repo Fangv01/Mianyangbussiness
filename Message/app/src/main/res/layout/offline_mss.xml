@@ -21,7 +21,8 @@ android:orientation="vertical"
             android:text="发送短信"
             android:textSize="45sp"
     />
-    <TextView android:layout_width="match_parent" android:layout_height="50dp"/><Button android:id="@+id/my_mss"
+    <TextView android:layout_width="match_parent" android:layout_height="50dp"/>
+    <Button android:id="@+id/my_mss"
               android:layout_width="match_parent"
 
               android:layout_height="400px"
