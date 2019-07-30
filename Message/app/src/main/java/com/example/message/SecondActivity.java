@@ -15,6 +15,8 @@ import androidx.annotation.NonNull;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import butterknife.ButterKnife;
+
 public class SecondActivity extends Activity {
     public TextView tv_user;
     public Button bt_back;
@@ -53,6 +55,7 @@ public class SecondActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+
         tv_user=findViewById(R.id.user);
         bt_back=findViewById(R.id.back);
         bt_back.setOnClickListener(new View.OnClickListener() {
@@ -71,6 +74,7 @@ public class SecondActivity extends Activity {
         navigationView.setSelectedItemId(R.id.nv_work);
         navigationView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener);
     }
+
     @Override
     public void onStart(){
         super.onStart();
