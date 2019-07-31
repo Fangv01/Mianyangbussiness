@@ -16,6 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SecondActivity"></activity>
+        <activity android:name=".my.My_Document"></activity>
+        <activity android:name=".my.Setting"></activity>
 
     </application>
 
