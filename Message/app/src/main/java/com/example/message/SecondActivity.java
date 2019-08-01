@@ -5,12 +5,10 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 import androidx.annotation.NonNull;
@@ -77,18 +75,6 @@ public class SecondActivity extends Activity {
     public void onStart(){
         super.onStart();
     }
-    private long exitTime = 0;
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK&& event.getAction() == KeyEvent.ACTION_DOWN) {
-            if ((System.currentTimeMillis() - exitTime) > 2000) {
-                Toast.makeText(getApplicationContext(), "再按一次退出程序", Toast.LENGTH_SHORT).show();
-                exitTime = System.currentTimeMillis();
-                } else finish();
-                return true;
-            }
-        return super.onKeyDown(keyCode, event);
-     }
     private FragmentTransaction transaction;
     private FragmentManager fragmentManager;
     private void setDefaultFragment(){
