@@ -2,36 +2,45 @@ package com.example.message.my;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 
+import androidx.appcompat.widget.Toolbar;
+
 import com.example.message.R;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
-public class My_Document extends Activity implements View.OnClickListener {
+public class My_Document extends Activity {
     private ListView mListView;
-    private Button mOK;
+    private EditText pathText;
     private MyFileAdapter mAdapter;
     private Context mContext;
     private File currentFile;
-    String sdRootPath;
-
+    private String sdRootPath;
+    private Toolbar toolbar;
     private ArrayList<FileEntity> mList;
     private Handler mHandler;
     @SuppressLint("HandlerLeak")
@@ -39,6 +48,45 @@ public class My_Document extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_documentlist);
+        pathText=findViewById(R.id.path_text);
+        toolbar=findViewById(R.id.toolbar);
+        toolbar.inflateMenu(R.menu.add_menu);
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.add_floder:
+                        final EditText foldername=new EditText(mContext);
+                        AlertDialog.Builder builder=new AlertDialog.Builder(mContext);
+                        builder.setTitle("输入文件夹名").setView(foldername).setNegativeButton("Cancel",null)
+                                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        createFolder(foldername.getText().toString());
+                                        getData(currentFile.toString());
+                                    }
+                                });
+                        builder.show();
+                        break;
+                    case R.id.add_file:
+                        final EditText filename=new EditText(mContext);
+                        AlertDialog.Builder build=new AlertDialog.Builder(mContext);
+                        build.setTitle("输入文件名").setView(filename).setNegativeButton("Cancel",null)
+                                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        createFile(filename.getText().toString());
+                                        getData(currentFile.toString());
+                                    }
+                                });
+                        build.show();
+                        break;
+                    default:
+                        break;
+                }
+                return false;
+            }
+        });
         mHandler=new Handler(){
             @Override
             public void handleMessage(Message msg){
@@ -56,13 +104,19 @@ public class My_Document extends Activity implements View.OnClickListener {
         };
         mContext=this;
         mList=new ArrayList<>();
-        //sdRootPath= Environment.getExternalStorageDirectory().getAbsolutePath();
         sdRootPath="/data/user/0/com.example.message";
         currentFile=new File(sdRootPath);
+        pathText.setText(currentFile.toString().substring(sdRootPath.length()));
         System.out.println(sdRootPath);
         initView();
         getData(sdRootPath);
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.add_menu, menu);
+        return true;
+    }
+
     @Override
     public void onBackPressed(){
         System.out.println("onBackPressed");
@@ -74,60 +128,35 @@ public class My_Document extends Activity implements View.OnClickListener {
         String parentPath = currentFile.getParent();
         if (parentPath != null) {
             currentFile=new File(parentPath);
+            pathText.setText(currentFile.toString().substring(sdRootPath.length()));
             getData(parentPath);
-        }
-
+        }else super.onBackPressed();
     }
 
     private void initView(){
         mListView=findViewById(R.id.docList);
-        mOK=findViewById(R.id.OK);
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 final FileEntity entity=mList.get(position);
                 if(entity.getFileType()== FileEntity.Type.FLODER){
                     currentFile=new File(entity.getFilePath());
+                    pathText.setText(currentFile.toString().substring(sdRootPath.length()));
                     getData(entity.getFilePath());
                 }else if(entity.getFileType()== FileEntity.Type.FILE){
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            //Toast.makeText(mContext,"OK",1);
-                            Toast.makeText(mContext,entity.getFilePath()+" "+entity.getFileName(),1).show();
-                        }
-                    });
+
                 }
             }
         });
     }
     private void getData(final String path){
-        new Thread(){
-            @Override
-            public void run(){
-                super.run();
-                findAllFiles(path);
-            }
-        }.start();
-    }
-    @Override
-    public void onStart(){
-        super.onStart();
-    }
-
-    @Override
-    public void onClick(View view) {
-        if(view.getId()==R.id.OK){
-            setResult(100);
-            finish();
-        }
+        findAllFiles(path);
     }
     public void findAllFiles(String path){
         mList.clear();
         if(path==null||path.equals(""))return;
         File fatherFile = new File(path);
         File[] files=fatherFile.listFiles();
-
         System.out.println(this.getFilesDir().getAbsolutePath()+" OK");
         if (files != null && files.length > 0) {
             for (int i = 0; i < files.length; i++) {
@@ -147,6 +176,32 @@ public class My_Document extends Activity implements View.OnClickListener {
         }
         mHandler.sendEmptyMessage(1);
     }
+
+    private void createFile(String filename){
+        File newFile=new File(currentFile.toString()+"/"+filename+".txt");
+        if(newFile.exists()){
+            newFile.delete();
+        }
+        try {
+            newFile.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private void createFolder(String foldername){
+        File newfolder=new File(currentFile.toString()+"/"+foldername);
+        if(newfolder.exists())Toast.makeText(mContext,"文件夹已存在",Toast.LENGTH_LONG);
+        else {
+            newfolder.mkdir();
+            if(newfolder.isDirectory()||newfolder.mkdirs())Toast.makeText(mContext,"创建成功",Toast.LENGTH_LONG);
+           else Toast.makeText(mContext,"创建失败",Toast.LENGTH_LONG);
+        }
+    }
+    @Override
+    public void onStart(){
+        super.onStart();
+    }
+
     class MyFileAdapter extends BaseAdapter {
         private Context mAContext;
         private ArrayList<FileEntity> mAList;
@@ -187,7 +242,6 @@ public class My_Document extends Activity implements View.OnClickListener {
         }
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-//          System.out.println("position-->"+position+"  ---convertView--"+convertView);
             ViewHolder holder = null;
             int type = getItemViewType(position);
             FileEntity entity = mAList.get(position);
