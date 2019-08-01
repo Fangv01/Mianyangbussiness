@@ -16,16 +16,23 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="14dp"
             android:text="确定"/>
-        <View
+
+        <EditText
+            android:id="@+id/path_text"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/OK"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_toStartOf="@+id/OK"
+            android:layout_toLeftOf="@+id/OK"
             android:background="#666"
-            android:layout_alignParentBottom="true"/>
+            android:gravity="left|center"
+            android:text="XXX" />
     </RelativeLayout>
 
     <ListView
         android:id="@+id/docList"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"></ListView>
+        android:layout_height="wrap_content"></ListView>
 </LinearLayout>
