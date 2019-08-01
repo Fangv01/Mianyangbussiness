@@ -8,8 +8,11 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.FileUtils;
 import android.os.Handler;
 import android.os.Message;
+import android.os.RemoteException;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,7 +20,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -135,6 +137,7 @@ public class My_Document extends Activity {
 
     private void initView(){
         mListView=findViewById(R.id.docList);
+        registerForContextMenu(mListView);
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
@@ -144,11 +147,60 @@ public class My_Document extends Activity {
                     pathText.setText(currentFile.toString().substring(sdRootPath.length()));
                     getData(entity.getFilePath());
                 }else if(entity.getFileType()== FileEntity.Type.FILE){
-
+                    File file=new File(currentFile.toString()+"/"+entity.getFileName());
+                    Intent intent=getTextFileIntent(file);
+                    try { startActivity(intent);
+                    }catch (Exception e){Toast.makeText(mContext,"无相应应用",Toast.LENGTH_LONG);}
                 }
             }
         });
+        mListView.setOnCreateContextMenuListener(new View.OnCreateContextMenuListener() {
+            @Override
+            public void onCreateContextMenu(ContextMenu menu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
+                menu.add(0,1,0,"打开");
+                menu.add(0,2,0,"删除");
+                menu.add(0,3,0,"删除全部");
+            }
+        });
     }
+    @Override
+    public  boolean onContextItemSelected(MenuItem item){
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo)item.getMenuInfo();
+        final FileEntity entity=mList.get(info.position);
+        switch (item.getItemId()){
+            case 1:
+                if(entity.getFileType()== FileEntity.Type.FLODER){
+                    currentFile=new File(entity.getFilePath());
+                    pathText.setText(currentFile.toString().substring(sdRootPath.length()));
+                    getData(entity.getFilePath());
+                }else if(entity.getFileType()== FileEntity.Type.FILE){
+                    File file=new File(currentFile.toString()+"/"+entity.getFileName());
+                    Intent intent=getTextFileIntent(file);
+                    startActivity(intent);
+                }
+                break;
+            case 2:
+                if(entity.getFileType()== FileEntity.Type.FLODER){
+                    File file=new File(currentFile.toString()+"/"+entity.getFileName());
+                    file.delete();
+                }else if(entity.getFileType()== FileEntity.Type.FILE){
+                    File file=new File(currentFile.toString()+"/"+entity.getFileName());
+                    file.delete();
+                }
+                getData(currentFile.toString());
+                break;
+            case 3:
+                File file=new File(currentFile.toString());
+                file.delete();
+                file.mkdir();
+                getData(currentFile.toString());
+                break;
+            default:break;
+        }
+        return true;
+    }
+
+
     private void getData(final String path){
         findAllFiles(path);
     }
@@ -157,7 +209,6 @@ public class My_Document extends Activity {
         if(path==null||path.equals(""))return;
         File fatherFile = new File(path);
         File[] files=fatherFile.listFiles();
-        System.out.println(this.getFilesDir().getAbsolutePath()+" OK");
         if (files != null && files.length > 0) {
             for (int i = 0; i < files.length; i++) {
                 FileEntity entity = new FileEntity();
@@ -171,7 +222,6 @@ public class My_Document extends Activity {
                 entity.setFilePath(files[i].getAbsolutePath());
                 entity.setFileSize(files[i].length()+"");
                 mList.add(entity);
-                System.out.println(entity.toString());
             }
         }
         mHandler.sendEmptyMessage(1);
@@ -201,7 +251,14 @@ public class My_Document extends Activity {
     public void onStart(){
         super.onStart();
     }
-
+    public static Intent getTextFileIntent(File file) {
+        Intent intent = new Intent("android.intent.action.VIEW");
+        intent.addCategory("android.intent.category.DEFAULT");
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        Uri uri = Uri.fromFile(file);
+        intent.setDataAndType(uri, "text/plain");
+        return intent;
+    }
     class MyFileAdapter extends BaseAdapter {
         private Context mAContext;
         private ArrayList<FileEntity> mAList;
