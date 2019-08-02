@@ -1,4 +1,4 @@
-package com.example.message;
+package com.example.message.message;
 
 
 import android.os.Bundle;
@@ -8,7 +8,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class Message_Send extends message_phone {
+import com.example.message.R;
+
+public class Message_Send extends Message_Phone {
     private View view;
     private Button send,save;
 

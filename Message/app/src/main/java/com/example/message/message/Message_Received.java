@@ -1,15 +1,11 @@
-package com.example.message;
+package com.example.message.message;
 
-import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.PopupWindow;
-import android.widget.Toast;
 
-import androidx.annotation.RequiresApi;
+import com.example.message.R;
 
 public class Message_Received extends Message_My{
     private View view;

@@ -1,9 +1,12 @@
-package com.example.message;
+package com.example.message.message;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.message.Fragment1;
+import com.example.message.R;
 
 public class Message_Self extends Fragment1 {
     @Override

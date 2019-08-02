@@ -1,4 +1,4 @@
-package com.example.message;
+package com.example.message.message;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -6,10 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import androidx.annotation.Nullable;
 import android.app.Fragment;
 
-public class message_phone extends Fragment {
+import com.example.message.R;
+
+public class Message_Phone extends Fragment {
     private Button btn;
     private View view;
 

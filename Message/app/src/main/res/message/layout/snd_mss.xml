@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="10px" android:orientation="vertical">
+    - <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+    <TextView android:layout_width="0px"
+              android:layout_weight="1"
+              android:layout_height="200px"
+              android:gravity="center" android:textSize="50sp"
+              android:text="发送短信"
+    />
+</LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+                  android:orientation="horizontal"
+                  android:layout_height="125px"
+                  
+    ><EditText
+            android:id="@+id/recver_name"
+            android:layout_width="0px"
+               android:layout_weight="8"
+            android:hint="在此输入收信人姓名"
+            android:layout_height="match_parent"/>
+        <EditText
+                android:id="@+id/recver_number"
+                android:layout_width="0px"
+                android:layout_weight="11"
+                android:hint="在此输入收信人号码"
+                android:layout_height="match_parent"/>
+
+    </LinearLayout>
+    <LinearLayout
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+
+           android:gravity="right"
+            android:layout_height="150px"
+
+    >
+        <Button
+                android:id="@+id/saveintobox"
+                android:layout_width="200px"
+
+                android:hint="存至草稿箱"
+                android:layout_height="match_parent"/>
+
+
+
+
+    </LinearLayout>
+
+    - <LinearLayout
+        android:id="@+id/send_mss"
+        android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="top"
+                    android:layout_height="match_parent">
+
+    <EditText
+            android:id="@+id/mss"
+            android:layout_width="0px"
+
+              android:layout_weight="8"
+            android:hint="在此编辑短信内容"
+        android:gravity="top"
+        android:layout_gravity="bottom"
+            android:textSize="30sp"
+              android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/snd_mss"
+        android:layout_width="0px"
+
+        android:layout_height="180px"
+        android:layout_weight="3"
+        android:text="发送短信"
+
+        android:textSize="20sp"
+
+        ></Button>
+
+</LinearLayout>
+</LinearLayout>
+</ScrollView>
