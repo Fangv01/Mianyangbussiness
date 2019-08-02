@@ -28,6 +28,7 @@
                 android:textColor="#000000"/>
 
             <Button
+                android:id="@+id/btn_complete"
                 android:background="#00000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -38,166 +39,200 @@
                 />
         </RelativeLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/cal_calendar"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="15dp"
+            />
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <View
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:background="@drawable/cal_calendar"
-                android:layout_marginTop="35dp"
-                android:layout_marginLeft="28dp"
-                android:layout_marginRight="15dp"
-                />
-            <EditText
-                android:id="@+id/et_1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginTop="10dp"
-                android:background="@null"
-                android:hint="添加日程、会议、活动等标题"
-                android:padding="30dp"
-                android:paddingLeft="0dp"
-                android:paddingRight="30dp" />
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="添加日程、会议、活动等标题"
+            android:padding="20dp"
+            android:paddingRight="30dp" />
 
 
-        </LinearLayout>
+    </LinearLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <View
-                android:id="@+id/view"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:background="@drawable/cal_clock"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="28dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="98dp"
-                android:text="全天"
-                android:textColor="#000000"
-                android:textSize="20dp"/>
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="28dp"/>
-        </RelativeLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="日期对话框1"/>
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="日期对话框2"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:id="@+id/view"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="28dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/cal_clock"/>
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <View
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:background="@drawable/cal_people"
-                android:layout_marginTop="25dp"
-                android:layout_marginLeft="28dp"
-                android:layout_marginRight="15dp"
-                />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginTop="10dp"
-                android:background="@null"
-                android:hint="邀请参与人"
-                android:padding="15dp"
-                android:paddingRight="30dp" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="88dp"
+            android:text="全天"
+            android:textColor="#000000"
+            android:textSize="18dp"/>
+        <CheckBox
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <View
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:background="@drawable/cal_ding"
-                android:layout_marginTop="25dp"
-                android:layout_marginLeft="28dp"
-                android:layout_marginRight="15dp"
-                />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginTop="10dp"
-                android:background="@null"
-                android:hint="15分钟前，应用内提醒"
-                android:padding="15dp"
-                android:paddingRight="30dp" />
-        </LinearLayout>
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="28dp"/>
+    </RelativeLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/ll_time"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawableTop="@drawable/cal_place"
-                android:text="地点"
-                />
 
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawableTop="@drawable/cal_message"
-                android:text="通知"
-                />
+        <TextView
+            android:id="@+id/tv_selected_time1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="15sp" />
 
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawableTop="@drawable/cal_repetition"
-                android:text="重复"
-                />
+        <TextView
+            android:id="@+id/tv_selected_time2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@null"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+    </LinearLayout>
 
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawableTop="@drawable/cal_accessory"
-                android:text="附件"
-                />
 
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:drawableTop="@drawable/cal_description"
-                android:text="描述"
-                />
-        </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <View
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/cal_people"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="15dp"
+            />
+
+        <EditText
+            android:id="@+id/a"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="邀请参与人"
+            android:padding="15dp"
+            android:paddingRight="30dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/cal_ding"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="15dp"
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:background="#00000000"
+            android:text="15分钟前，应用内提醒"
+            android:gravity="left"
+            android:padding="15dp"
+            android:paddingRight="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:layout_width="0dp"
+            android:background="#00000000"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/cal_place"
+            android:text="地点"
+            android:textSize="12dp"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:background="#00000000"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/cal_message"
+            android:text="通知"
+            android:textSize="12dp"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:background="#00000000"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/cal_repetition"
+            android:text="重复"
+            android:textSize="12dp"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:background="#00000000"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/cal_accessory"
+            android:text="附件"
+            android:textSize="12dp"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:background="#00000000"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/cal_description"
+            android:text="描述"
+            android:textSize="12dp"
+            />
+
+    </LinearLayout>
 </LinearLayout>
 
