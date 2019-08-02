@@ -1,4 +1,4 @@
-package com.example.message.lib;
+package com.example.message.calendar;
 
 
 import java.util.ArrayList;
@@ -6,7 +6,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
-import static com.example.message.lib.CalendarUtil.getDayOfWeek;
+import static com.example.message.calendar.CalendarUtil.getDayOfWeek;
 
 public class CalendarFactory {
 

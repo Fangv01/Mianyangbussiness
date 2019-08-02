@@ -1,4 +1,4 @@
-package com.example.message.lib;
+package com.example.message.calendar;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -16,7 +16,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedList;
 
-import static com.example.message.lib.CalendarFactory.getMonthOfDayList;
+import static com.example.message.calendar.CalendarFactory.getMonthOfDayList;
 
 public class CalendarDateView extends ViewPager implements CalendarTopView{
     HashMap<Integer, CalendarView> views = new HashMap<>();

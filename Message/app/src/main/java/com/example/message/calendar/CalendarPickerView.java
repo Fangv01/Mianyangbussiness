@@ -1,4 +1,4 @@
-package com.example.message.lib;
+package com.example.message.calendar;
 
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;

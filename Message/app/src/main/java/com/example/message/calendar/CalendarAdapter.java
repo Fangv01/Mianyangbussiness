@@ -1,4 +1,4 @@
-package com.example.message.lib;
+package com.example.message.calendar;
 
 import android.view.View;
 import android.view.ViewGroup;

@@ -13,11 +13,12 @@ import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
 
-import com.example.message.lib.CalendarAdapter;
-import com.example.message.lib.CalendarBean;
-import com.example.message.lib.CalendarDateView;
-import com.example.message.lib.CalendarUtil;
-import com.example.message.lib.CalendarView;
+import com.example.message.calendar.CalendarAdapter;
+import com.example.message.calendar.CalendarBean;
+import com.example.message.calendar.CalendarDateView;
+import com.example.message.calendar.CalendarScheduleActivity;
+import com.example.message.calendar.CalendarUtil;
+import com.example.message.calendar.CalendarView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.Date;
@@ -80,7 +81,7 @@ public class Fragment4 extends Fragment {
 
         mCalendarDateView.setOnItemClickListener(new CalendarView.OnItemClickListener() {
             @Override
-            public void onItemClick(View view, int postion, CalendarBean bean) {
+            public void onItemClick(View view, int position, CalendarBean bean) {
                 mTitle.setText(bean.year + "/" + getDisPlayNumber(bean.month) + "/" + getDisPlayNumber(bean.day));
             }
         });
@@ -121,7 +122,7 @@ public class Fragment4 extends Fragment {
         });
 
         //跳转到下一活动
-        Intent intent = new Intent(getActivity(), ScheduleActivity.class);
+        Intent intent = new Intent(getActivity(), CalendarScheduleActivity.class);
         floatingActionButton.setOnClickListener(view1 -> startActivity(intent));
 
         return view;

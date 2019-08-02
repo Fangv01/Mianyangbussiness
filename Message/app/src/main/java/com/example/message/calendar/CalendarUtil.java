@@ -1,4 +1,4 @@
-package com.example.message.lib;
+package com.example.message.calendar;
 
 import java.util.Calendar;
 import java.util.Date;

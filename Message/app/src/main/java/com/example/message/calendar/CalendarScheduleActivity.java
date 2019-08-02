@@ -1,4 +1,4 @@
-package com.example.message;
+package com.example.message.calendar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,8 +8,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.message.R;
-import com.example.message.lib.CalendarCustomDatePicker;
-import com.example.message.lib.CalendarDateFormatUtils;
+import com.example.message.calendar.CalendarCustomDatePicker;
+import com.example.message.calendar.CalendarDateFormatUtils;
 
 public class CalendarScheduleActivity extends AppCompatActivity implements View.OnClickListener{
     private TextView  mTvSelectedTime1,mTvSelectedTime2;

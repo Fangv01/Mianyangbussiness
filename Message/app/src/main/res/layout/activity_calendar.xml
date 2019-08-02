@@ -83,12 +83,12 @@
 
     </LinearLayout>
 
-    <com.example.message.lib.CalendarLayout
+    <com.example.message.calendar.CalendarLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <com.example.message.lib.CalendarDateView
+        <com.example.message.calendar.CalendarDateView
             android:id="@+id/calendarDateView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -100,7 +100,7 @@
             android:layout_height="wrap_content"
             android:background="@color/white"/>
 
-    </com.example.message.lib.CalendarLayout>
+    </com.example.message.calendar.CalendarLayout>
 
     //FloatingActionButton
     <RelativeLayout
