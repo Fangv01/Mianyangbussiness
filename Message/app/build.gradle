@@ -22,6 +22,11 @@ android {
             res.srcDirs =
                     [
                             'src/main/res/my',
+                            'src/main/res/address',
+                            'src/main/res/calendar',
+                            'src/main/res/message',
+                            'src/main/res/my',
+                            'src/main/res/work',
                             'src/main/res'
                     ]
         }

@@ -55,19 +55,6 @@ public class SecondActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-        tv_user=findViewById(R.id.user);
-        bt_back=findViewById(R.id.back);
-        bt_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=getIntent();
-                setResult(100,intent);
-                SecondActivity.this.finish();
-            }
-        });
-        Intent intent = getIntent();
-        username=intent.getStringExtra("user");
-        tv_user.setText(username);
         setDefaultFragment();
         BottomNavigationView navigationView = findViewById(R.id.navigation);
         navigationView.setSelectedItemId(R.id.nv_work);

@@ -273,13 +273,11 @@ public class My_Document extends Activity {
 
         @Override
         public int getCount() {
-            // TODO Auto-generated method stub
             return mAList.size();
         }
 
         @Override
         public Object getItem(int position) {
-            // TODO Auto-generated method stub
             return mAList.get(position);
         }
 

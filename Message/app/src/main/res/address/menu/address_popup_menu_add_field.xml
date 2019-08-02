@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/addPhone2Field"
+        android:title="添加电话"/>
+
+    <item
+        android:id="@+id/addEmail2Field"
+        android:title="添加Email"/>
+
+    <item
+        android:id="@+id/addAddressField"
+        android:title="添加地址"/>
+
+</menu>  
