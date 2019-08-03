@@ -1,6 +1,7 @@
 package com.example.message;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,32 +15,26 @@ public class Fragment1 extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
         rootView = inflater.inflate(R.layout.activity_message, container, false);
-
         rootView.findViewById(R.id.offline_mss).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getFragmentManager()
-                        .beginTransaction()
-                        .addToBackStack(null)  //将当前fragment加入到返回栈中
-                        .replace(R.id.container, new Message_Phone()).commit();
+                Intent intent1=new Intent();
+                intent1.setClass(getActivity(),Message_Phone.class);
+                startActivity(intent1);
             }
         });
         rootView.findViewById(R.id.online_mss).setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
-                getFragmentManager()
-                        .beginTransaction()
-                        .addToBackStack(null)  //将当前fragment加入到返回栈中
-                        .replace(R.id.container, new Message_Self()).commit();
+                Intent intent2=new Intent();
+                intent2.setClass(getActivity(),Message_Self.class);
+                startActivity(intent2);
             }
-
         });
-            return rootView;
-        }
+        return rootView;
     }
+}
 
 
 

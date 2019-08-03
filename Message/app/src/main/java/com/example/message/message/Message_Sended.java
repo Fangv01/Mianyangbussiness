@@ -1,5 +1,7 @@
 package com.example.message.message;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,14 +16,17 @@ import androidx.annotation.RequiresApi;
 
 import com.example.message.R;
 
-public class Message_Sended extends Message_My {
-    private View view;
+public class Message_Sended extends Activity {
     private Button popwindow;
     private PopupWindow Pop;
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        view=inflater.inflate(R.layout.sended_mss,container,false);
-        popwindow=view.findViewById(R.id.pop);
-        final TextView message1=view.findViewById(R.id.mss1);
+    private Context mcontext;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.sended_mss);
+        mcontext=this;
+        popwindow=findViewById(R.id.pop);
+        final TextView message1=findViewById(R.id.mss1);
         popwindow.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
@@ -32,9 +37,8 @@ public class Message_Sended extends Message_My {
                     @Override
                     public void onClick(View view) {
                         Pop.dismiss();
-                        //
                         message1.setText(null);
-                        Toast.makeText(getActivity(),"已删除",Toast.LENGTH_LONG).show();
+                        Toast.makeText(mcontext,"已删除",Toast.LENGTH_LONG).show();
                     }
                 });
                 Pop = new PopupWindow(view, 200, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -43,13 +47,5 @@ public class Message_Sended extends Message_My {
                 Pop.showAsDropDown(popwindow);
             }
         });
-
-        return view;
-    }
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-
     }
 }

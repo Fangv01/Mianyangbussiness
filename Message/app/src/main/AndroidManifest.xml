@@ -21,8 +21,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity">
-        </activity>
+        <activity android:name=".SecondActivity"></activity>
+        <activity android:name=".message.Message_Box"></activity>
+        <activity android:name=".message.Message_Sended"></activity>
+        <activity android:name=".message.Message_Send"></activity>
+        <activity android:name=".message.Message_Self"></activity>
+        <activity android:name=".message.Message_My"></activity>
+        <activity android:name=".message.Message_Phone"></activity>
+        <activity android:name=".message.Message_Received"></activity>
         <activity android:name=".my.My_Document"></activity>
         <activity android:name=".my.Setting"></activity>
         <activity android:name=".address.ABAdd"></activity>

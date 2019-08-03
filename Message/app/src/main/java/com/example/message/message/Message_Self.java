@@ -1,5 +1,7 @@
 package com.example.message.message;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,54 +10,43 @@ import android.view.ViewGroup;
 import com.example.message.Fragment1;
 import com.example.message.R;
 
-public class Message_Self extends Fragment1 {
+public class Message_Self extends Activity {
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        View rootView = inflater.inflate(R.layout.online_mss, container, false);
-        rootView.findViewById(R.id.wrt_mss).setOnClickListener(new View.OnClickListener() {
-
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.online_mss);
+        findViewById(R.id.snd_mss).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getFragmentManager()
-                        .beginTransaction()
-                        .addToBackStack(null)  //将当前fragment加入到返回栈中
-                        .replace(R.id.container, new Message_Send()).commit();
+                Intent intent1=new Intent();
+                intent1.setClass(Message_Self.this,Message_Send.class);
+                startActivity(intent1);
             }
-
         });
-        rootView.findViewById(R.id.gotten_mss).setOnClickListener(new View.OnClickListener() {
-
+        findViewById(R.id.gotten_mss).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getFragmentManager()
-                        .beginTransaction()
-                        .addToBackStack(null)  //将当前fragment加入到返回栈中
-                        .replace(R.id.container, new Message_Received()).commit();
+                Intent intent2=new Intent();
+                intent2.setClass(Message_Self.this,Message_Received.class);
+                startActivity(intent2);
             }
-
         });
-        rootView.findViewById(R.id.search_mss).setOnClickListener(new View.OnClickListener() {
-
+        findViewById(R.id.search_mss).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getFragmentManager()
-                        .beginTransaction()
-                        .addToBackStack(null)  //将当前fragment加入到返回栈中
-                        .replace(R.id.container, new Message_Send()).commit();
+                Intent intent3=new Intent();
+                intent3.setClass(Message_Self.this,Message_Sended.class);
+                startActivity(intent3);
             }
-
         });
-        rootView.findViewById(R.id.ready_send_mss).setOnClickListener(new View.OnClickListener() {
-
+        findViewById(R.id.ready_send_mss).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getFragmentManager()
-                        .beginTransaction()
-                        .addToBackStack(null)  //将当前fragment加入到返回栈中
-                        .replace(R.id.container, new Message_Box()).commit();
+                Intent intent4=new Intent();
+                intent4.setClass(Message_Self.this,Message_Box.class);
+                startActivity(intent4);
             }
-
         });
-        return rootView;
     }
+
 }
