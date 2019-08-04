@@ -2,200 +2,65 @@
 <ScrollView android:layout_height="match_parent"
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android" >
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="10px" android:orientation="vertical">
-    - <LinearLayout android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-    <TextView android:layout_width="0px"
-              android:layout_weight="1"
-              android:layout_height="200px"
-              android:gravity="center" android:textSize="50sp"
-              android:text="已接受短信"
-    />
-
-    </LinearLayout>
-    <LinearLayout android:layout_width="match_parent"
-                  android:orientation="horizontal"
-                  android:layout_height="wrap_content">
-        <Button android:layout_width="0px"
-                android:layout_weight="1" android:layout_height="match_parent"
-                android:text="按接受时间排序"
-                android:textSize="20sp"
-        />
-        <Button android:layout_width="0px"
-                android:layout_weight="1" android:layout_height="match_parent"
-                android:text="按发件人排序"
-                android:textSize="20sp"
-        />
-
-
-    </LinearLayout>
-    - <LinearLayout android:layout_width="match_parent"
-                    android:orientation="horizontal"
-                    android:gravity="top"
-                    android:layout_height="200px">
-    <TextView android:id="@+id/mss1"
-            android:layout_width="0px"
-android:layout_weight="8"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="10px" android:orientation="vertical">
+        - <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView android:layout_width="0px"
+            android:layout_weight="1"
+            android:background="@drawable/button_style"
             android:layout_height="200px"
-            android:text="null"
-            android:textSize="45sp"
-    />
-    <TextView android:id="@+id/mss1time"
-              android:layout_width="0px"
-              android:layout_weight="1"
-              android:layout_height="match_parent"
-              android:text="null"
-              android:gravity="center"
-              android:textSize="20sp"
-    >
-    </TextView>
-</LinearLayout>
-    <LinearLayout android:layout_width="match_parent"
-                  android:orientation="horizontal"
-                  android:gravity="top"
-                  android:layout_height="200px">
-        <TextView android:id="@+id/mss2"
-                  android:layout_width="0px"
-                  android:layout_weight="8"
-                  android:layout_height="200px"
-                  android:text="null"
-                  android:textSize="45sp"
-        />
-        <TextView android:id="@+id/mss2time"
-                  android:layout_width="0px"
-                  android:layout_weight="1"
-                  android:layout_height="match_parent"
-                  android:text="null"
-                  android:gravity="center"
-                  android:textSize="20sp"
-        >
-        </TextView>
+            android:gravity="center" android:textSize="50sp"
+            android:text="已接收短信"
+            android:textColor="#F7F7F7"
+            />
+
     </LinearLayout>
-    <LinearLayout android:layout_width="match_parent"
-                  android:orientation="horizontal"
-                  android:gravity="top"
-                  android:layout_height="200px">
-        <TextView android:id="@+id/mss3"
-                  android:layout_width="0px"
-                  android:layout_weight="8"
-                  android:layout_height="200px"
-                  android:text="null"
-                  android:textSize="45sp"
-        />
-        <TextView android:id="@+id/mss3time"
-                  android:layout_width="0px"
-                  android:layout_weight="1"
-                  android:layout_height="match_parent"
-                  android:text="null"
-                  android:gravity="center"
-                  android:textSize="20sp"
-        >
-        </TextView>
+
+        - <LinearLayout android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="top"
+        android:layout_height="wrap_content">
+        <TextView android:id="@+id/received1"
+            android:background="@drawable/underline"
+            android:layout_width="match_parent"
+            android:layout_weight="8"
+            android:layout_height="wrap_content"
+            android:text="8-1\n小明发送了A，我收到了A....."
+
+            android:textSize="25sp"
+            />
+
+
     </LinearLayout>
-    <LinearLayout android:layout_width="match_parent"
-                  android:orientation="horizontal"
-                  android:gravity="top"
-                  android:layout_height="200px">
-        <TextView android:id="@+id/mss4"
-                  android:layout_width="0px"
-                  android:layout_weight="8"
-                  android:layout_height="200px"
-                  android:text="null"
-                  android:textSize="45sp"
-        />
-        <TextView android:id="@+id/mss4time"
-                  android:layout_width="0px"
-                  android:layout_weight="1"
-                  android:layout_height="match_parent"
-                  android:text="null"
-                  android:gravity="center"
-                  android:textSize="20sp"
-        >
-        </TextView>
+        <LinearLayout android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="top"
+            android:layout_height="wrap_content">
+            <TextView android:id="@+id/received2"
+                android:background="@drawable/underline"
+                android:layout_width="match_parent"
+                android:layout_weight="8"
+                android:layout_height="wrap_content"
+                android:text="7-29\n小明发送了B，我收到了B....."
+                android:textSize="25sp"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="top"
+            android:layout_height="wrap_content">
+            <TextView android:id="@+id/received3"
+                android:background="@drawable/underline"
+                android:layout_width="match_parent"
+                android:layout_weight="8"
+                android:layout_height="wrap_content"
+                android:text="7-25\n小明发送了C，我收到了C....."
+                android:textSize="25sp"
+                />
+
+
+        </LinearLayout>
     </LinearLayout>
-    <LinearLayout android:layout_width="match_parent"
-                  android:orientation="horizontal"
-                  android:gravity="top"
-                  android:layout_height="200px">
-        <TextView android:id="@+id/mss5"
-                  android:layout_width="0px"
-                  android:layout_weight="8"
-                  android:layout_height="200px"
-                  android:text="null"
-                  android:textSize="45sp"
-        />
-        <TextView android:id="@+id/mss5time"
-                  android:layout_width="0px"
-                  android:layout_weight="1"
-                  android:layout_height="match_parent"
-                  android:text="null"
-                  android:gravity="center"
-                  android:textSize="20sp"
-        >
-        </TextView>
-    </LinearLayout>
-    <LinearLayout android:layout_width="match_parent"
-                  android:orientation="horizontal"
-                  android:gravity="top"
-                  android:layout_height="200px">
-        <TextView android:id="@+id/mss6"
-                  android:layout_width="0px"
-                  android:layout_weight="8"
-                  android:layout_height="200px"
-                  android:text="null"
-                  android:textSize="45sp"
-        />
-        <TextView android:id="@+id/mss6time"
-                  android:layout_width="0px"
-                  android:layout_weight="1"
-                  android:layout_height="match_parent"
-                  android:text="null"
-                  android:gravity="center"
-                  android:textSize="20sp"
-        >
-        </TextView>
-    </LinearLayout>
-    <LinearLayout android:layout_width="match_parent"
-                  android:orientation="horizontal"
-                  android:gravity="top"
-                  android:layout_height="200px">
-        <TextView android:id="@+id/mss7"
-                  android:layout_width="0px"
-                  android:layout_weight="8"
-                  android:layout_height="200px"
-                  android:text="null"
-                  android:textSize="45sp"
-        />
-        <TextView android:id="@+id/mss7time"
-                  android:layout_width="0px"
-                  android:layout_weight="1"
-                  android:layout_height="match_parent"
-                  android:text="null"
-                  android:gravity="center"
-                  android:textSize="20sp"
-        >
-        </TextView>
-    </LinearLayout>
-    <LinearLayout android:layout_width="match_parent"
-                  android:orientation="horizontal"
-                  android:gravity="top"
-                  android:layout_height="200px">
-        <TextView android:id="@+id/mss8"
-                  android:layout_width="0px"
-                  android:layout_weight="8"
-                  android:layout_height="200px"
-                  android:text="null"
-                  android:textSize="45sp"
-        />
-        <TextView android:id="@+id/mss8time"
-                  android:layout_width="0px"
-                  android:layout_weight="1"
-                  android:layout_height="match_parent"
-                  android:text="null"
-                  android:gravity="center"
-                  android:textSize="20sp"
-        >
-        </TextView>
-    </LinearLayout>
-</LinearLayout>
-    </ScrollView>
+</ScrollView>

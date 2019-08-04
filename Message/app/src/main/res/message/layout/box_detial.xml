@@ -29,7 +29,7 @@
                 android:background="@drawable/button_style2"
                 android:layout_width="wrap_content"
                 android:layout_weight="1"
-                android:hint="在此输入收信人号码"
+                android:text="123456789"
                 android:layout_height="wrap_content"/>
 
         </LinearLayout>
@@ -75,7 +75,7 @@
             android:layout_gravity="bottom"
             android:layout_weight="8"
             android:gravity="top"
-            android:hint="在此编辑短信内容"
+            android:text="我准备向小明发送A，但是还没有想好"
 
             android:textSize="27sp" />
 
