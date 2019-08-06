@@ -4,7 +4,7 @@
     <item
         android:id="@+id/nv_message"
         android:enabled="true"
-        android:icon="@android:drawable/sym_action_chat"
+        android:icon="@drawable/sec_message"
         app:showAsAction="ifRoom"
         android:title="消息"
          />
@@ -12,28 +12,28 @@
     <item
         android:id="@+id/nv_address"
         android:enabled="true"
-        android:icon="@android:drawable/ic_menu_my_calendar"
+        android:icon="@drawable/sec_contact"
         android:title="通讯录"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/nv_work"
         android:enabled="true"
-        android:icon="@android:drawable/presence_online"
+        android:icon="@drawable/sec_work"
         android:title="工作"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/nv_calendar"
         android:enabled="true"
-        android:icon="@android:drawable/ic_menu_month"
+        android:icon="@drawable/sec_calendar"
         android:title="日程"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/nv_my"
         android:enabled="true"
-        android:icon="@android:drawable/ic_menu_compass"
+        android:icon="@drawable/sec_my"
         android:title="我的"
         app:showAsAction="ifRoom" />
 
