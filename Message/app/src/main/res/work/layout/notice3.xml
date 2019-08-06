@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="60dp"
+        android:text="\t\t\t\t请各位同仁注意，公司近期有较多的财务丢失事件，请提高警惕；请丢失财务的同仁尽快上报后勤部门，并于公司3楼失物招领处查看是否有自己丢失的物品；请拾取到他人财务的同仁主动上交失物给失物招领处，谢谢各位的配合。"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="141dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="218dp"
+        android:layout_marginLeft="218dp"
+        android:gravity="right"
+        android:text="2019年7月15日\n公司后勤保障部" />
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="60dp"
+        android:text="\t\t\t\t为使我司各部门工作能顺利展开，并保证各部门之间能流畅衔接工作，有效提高工作效率，经公司领导商讨决定请各位同仁于今天（8.1日）下午5点召开全体职工大会，请勿缺席，有紧急事件需向考勤部门提交相应请假材料。"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="141dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="218dp"
+        android:layout_marginStart="218dp"
+        android:gravity="right"
+        android:text="2019年8月1日\n人事行政部"
+         />
+</LinearLayout>

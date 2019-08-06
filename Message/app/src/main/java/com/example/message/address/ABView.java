@@ -199,12 +199,10 @@ public class ABView extends Activity implements View.OnClickListener {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-
         if (id == R.id.edit_contact) {
             this.editDetails();
             return true;
         }
-
         if (id == R.id.delete_contact) {
             this.alertDialog().show();
             return true;

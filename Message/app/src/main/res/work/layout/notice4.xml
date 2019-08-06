@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
+        android:text="\t\t\t\t紧邻金秋时节，为庆祝公司成立6周年，总结6年来发展历程，展望未来发展方向，也为了感恩全体同仁的辛勤付出，经领导决定，将于8月31日晚7点，在公司斜对面高升酒楼3楼宴会厅举办公司成立6周年庆活动，届时宴请各位同仁一同飨宴，敬请各位同仁尽量正装出出席。"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="143dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="216dp"
+        android:layout_marginLeft="216dp"
+        android:gravity="right"
+        android:text="2019年8月5日\n人事行政部" />
+</LinearLayout>

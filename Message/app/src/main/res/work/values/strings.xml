@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="notice1"><u>      近期工作汇报和工作安排</u></string>
+    <string name="notice2"><u>      每周工作进度汇报总结</u></string>
+    <string name="notice3"><u>      失物招领</u></string>
+    <string name="notice4"><u>      周年庆活动</u></string>
+    <string name="notice5"><u>      新技能培训</u></string>
+</resources>

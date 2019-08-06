@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="60dp"
+        android:text="\t\t\t\t为提升公司员工的知识技能水平，经公司领导研究决定，公司将和Square Enix网上教育集团达成合作，向全体员工开放包含项目管理，新技能培训等在内的诸多方面的网上课堂，敬请各位尽快同仁去人事行政部领取各自的学习账号。"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="141dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="218dp"
+        android:layout_marginLeft="218dp"
+        android:gravity="right"
+        android:text="2019年7月20日\n人事行政部" />
+</LinearLayout>
