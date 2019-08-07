@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView3"
+    <ImageView
+        android:id="@+id/imageView12"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="王八蛋老板黄鹤\n带着小姨子跑了"
-        android:textSize="36sp"/>
+        android:layout_height="224dp"
+        app:srcCompat="@drawable/news2" />
 </LinearLayout>
