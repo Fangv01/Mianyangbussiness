@@ -22,6 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".SecondActivity"></activity>
+        <activity android:name=".New_User"></activity>
         <activity android:name=".message.Message_Box"></activity>
         <activity android:name=".message.Message_Sended"></activity>
         <activity android:name=".message.Message_Send"></activity>

@@ -19,10 +19,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        et_username =findViewById(R.id.et_username);
-        et_password=findViewById(R.id.et_password);
-        Button btn_login=findViewById(R.id.btn_login);
-        btn_login.setOnClickListener(new View.OnClickListener(){
+        et_username =findViewById(R.id.login_name);
+        et_password=findViewById(R.id.login_password);
+        findViewById(R.id.login).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 String username = et_username.getText().toString();
@@ -30,6 +29,13 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this,SecondActivity.class);
                 intent.putExtra("user",username);
                 intent.putExtra("pwd",password);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.new_user).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(MainActivity.this,New_User.class);
                 startActivity(intent);
             }
         });
