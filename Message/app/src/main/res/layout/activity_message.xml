@@ -9,18 +9,24 @@
     android:layout_width="match_parent" android:layout_height="match_parent" android:padding="10px" android:orientation="vertical">
 
 
+    -
+
+
     <LinearLayout android:layout_width="match_parent"
 
     android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/offline"
-        android:layout_width="372dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="8"
-        android:text=" 短信"
+        <TextView
+            android:id="@+id/offline"
+            android:layout_width="372dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
 
-        android:textSize="55dp" />
+
+            android:text=" 短信"
+
+            android:textColor="#000000"
+            android:textSize="30dp" />
 
     <Button
 
@@ -58,8 +64,24 @@
 
 
 </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
 
-    - <LinearLayout
+        android:layout_height="wrap_content">
+
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:iconifiedByDefault="false"
+            android:queryHint="搜索信息"
+            />
+
+
+    </LinearLayout>
+
+
+    - <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:weightSum="1">
@@ -75,19 +97,36 @@
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
         android:src="@drawable/message_face" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/received1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:paddingTop="5dp"
+        android:text="王总"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical" />
+    <TextView
+        android:id="@+id/received11"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:textSize="20sp"
         android:paddingTop="5dp"
-        android:text="王总：\n这个月的财务报表好像出了一些..."
-        android:textColor="@android:color/black"
-        android:layout_marginLeft="20dp"
-        android:gravity="center_vertical" />
+        android:text="这个月的财务报表好像出了..."
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        />
 </LinearLayout>
-    <LinearLayout
+
+</LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:weightSum="1">
@@ -104,18 +143,35 @@
             android:scaleType="centerCrop"
             android:src="@drawable/message_face" />
 
-        <TextView
-            android:id="@+id/received2"
-            android:layout_width="fill_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:paddingTop="5dp"
-            android:text="刘总：\n昨天王总找你核对报表了吗，我..."
-            android:textColor="@android:color/black"
-            android:layout_marginLeft="20dp"
-            android:gravity="center_vertical" />
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/received2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:paddingTop="5dp"
+                android:text="李总"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical" />
+            <TextView
+                android:id="@+id/received22"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:paddingTop="5dp"
+                android:text="昨天王总找你核对报表了吗..."
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                />
+        </LinearLayout>
     </LinearLayout>
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:weightSum="1">
@@ -132,18 +188,35 @@
             android:scaleType="centerCrop"
             android:src="@drawable/message_face" />
 
-        <TextView
-            android:id="@+id/recericed3"
-            android:layout_width="fill_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:paddingTop="5dp"
-            android:text="李总：\n财务报表出现纰漏，这不是应该..."
-            android:textColor="@android:color/black"
-            android:layout_marginLeft="20dp"
-            android:gravity="center_vertical" />
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/received3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:paddingTop="5dp"
+                android:text="李总"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical" />
+            <TextView
+                android:id="@+id/received33"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:paddingTop="5dp"
+                android:text="财务报表出现纰漏，是不是..."
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                />
+        </LinearLayout>
     </LinearLayout>
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:weightSum="1">
@@ -160,18 +233,35 @@
             android:scaleType="centerCrop"
             android:src="@drawable/message_face" />
 
-        <TextView
-            android:id="@+id/recericed4"
-            android:layout_width="fill_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:paddingTop="5dp"
-            android:text="张总\n昨天核对的帐我们对上了，报表..."
-            android:textColor="@android:color/black"
-            android:layout_marginLeft="20dp"
-            android:gravity="center_vertical" />
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/received4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:paddingTop="5dp"
+                android:text="张总"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical" />
+            <TextView
+                android:id="@+id/received44"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:paddingTop="5dp"
+                android:text="昨天的章我们核对上了，应..."
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                />
+        </LinearLayout>
     </LinearLayout>
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:weightSum="1">
@@ -188,18 +278,35 @@
             android:scaleType="centerCrop"
             android:src="@drawable/message_face" />
 
-        <TextView
-            android:id="@+id/recericed5"
-            android:layout_width="fill_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:paddingTop="5dp"
-            android:text="杨总：\n公司要6周年庆了，从我们创业到..."
-            android:textColor="@android:color/black"
-            android:layout_marginLeft="20dp"
-            android:gravity="center_vertical" />
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/received5"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:paddingTop="5dp"
+                android:text="杨总"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical" />
+            <TextView
+                android:id="@+id/received55"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:paddingTop="5dp"
+                android:text="公司要六周年庆了，我们可..."
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                />
+        </LinearLayout>
     </LinearLayout>
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:weightSum="1">
@@ -216,16 +323,33 @@
             android:scaleType="centerCrop"
             android:src="@drawable/message_face" />
 
-        <TextView
-            android:id="@+id/recericed6"
-            android:layout_width="fill_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:paddingTop="5dp"
-            android:text="王总:\n出国培训那部分钱是谁在管啊,他..."
-            android:textColor="@android:color/black"
-            android:layout_marginLeft="20dp"
-            android:gravity="center_vertical" />
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/received6"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:paddingTop="5dp"
+                android:text="王总"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical" />
+            <TextView
+                android:id="@+id/received66"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:paddingTop="5dp"
+                android:text="出国培训的资金是谁在管啊..."
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                />
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -245,19 +369,36 @@
             android:scaleType="centerCrop"
             android:src="@drawable/message_face" />
 
-        <TextView
-            android:id="@+id/recericed7"
-            android:layout_width="fill_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:gravity="center_vertical"
-            android:paddingTop="5dp"
-            android:text="林总:\n6周年庆晚上咱们几个去上次那家..."
-            android:textColor="@android:color/black"
-            android:textSize="20sp" />
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/received7"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:paddingTop="5dp"
+                android:text="林总"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical" />
+            <TextView
+                android:id="@+id/received77"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:paddingTop="5dp"
+                android:text="六周年晚上咱们可以去那家..."
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                />
+        </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:weightSum="1">
@@ -274,20 +415,37 @@
         android:scaleType="centerCrop"
         android:src="@drawable/message_face" />
 
-    <TextView
-        android:id="@+id/recericed8"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:paddingTop="5dp"
-        android:text="张总\nSE那边的人我联系了一下，有个..."
-        android:textColor="@android:color/black"
-        android:layout_marginLeft="20dp"
-        android:gravity="center_vertical" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/received8"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:paddingTop="5dp"
+                android:text="张总"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical" />
+            <TextView
+                android:id="@+id/received88"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:paddingTop="5dp"
+                android:text="SE那家我联系过了，时间定..."
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                />
+        </LinearLayout>
 
 
     </LinearLayout>
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:weightSum="1">
@@ -304,50 +462,37 @@
             android:scaleType="centerCrop"
             android:src="@drawable/message_face" />
 
-        <TextView
-            android:id="@+id/received9"
-            android:layout_width="fill_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:paddingTop="5dp"
-            android:text="老婆\n今天下午你去接一下孩子哈，我..."
-            android:textColor="@android:color/black"
-            android:layout_marginLeft="20dp"
-            android:gravity="center_vertical" />
+            android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/received9"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:paddingTop="5dp"
+                android:text="老婆"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical" />
+            <TextView
+                android:id="@+id/received99"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:paddingTop="5dp"
+                android:text="今天你去接一下孩子哈，我..."
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                />
+        </LinearLayout>
 
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="1">
 
-        <ImageView
-            android:id="@+id/face10"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginTop="5dp"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            android:src="@drawable/message_face" />
-
-        <TextView
-            android:id="@+id/recericed10"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:paddingTop="5dp"
-            android:text="老婆\n嫂子今天来家里玩，你记得买点水..."
-            android:textColor="@android:color/black"
-            android:layout_marginLeft="20dp"
-            android:gravity="center_vertical" />
-
-
-    </LinearLayout>
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:weightSum="1">
@@ -364,50 +509,38 @@
             android:scaleType="centerCrop"
             android:src="@drawable/message_face" />
 
-        <TextView
-            android:id="@+id/recericed11"
-            android:layout_width="fill_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:paddingTop="5dp"
-            android:text="林总\n晚上有时间吗，出来陪我喝喝酒吧..."
-            android:textColor="@android:color/black"
-            android:layout_marginLeft="20dp"
-            android:gravity="center_vertical" />
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/received10"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:paddingTop="5dp"
+                android:text="林总"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical" />
+            <TextView
+                android:id="@+id/received100"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:paddingTop="5dp"
+                android:text="今晚陪我去那个酒店一起参..."
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                />
+        </LinearLayout>
 
 
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="1">
 
-        <ImageView
-            android:id="@+id/face12"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginTop="5dp"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            android:src="@drawable/message_face" />
-
-        <TextView
-            android:id="@+id/recericed12"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:paddingTop="5dp"
-            android:text="林总\n晚上有时间吗，出来陪我喝喝酒吧..."
-            android:textColor="@android:color/black"
-            android:layout_marginLeft="20dp"
-            android:gravity="center_vertical" />
-
-
-    </LinearLayout>
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:weightSum="1">
@@ -424,20 +557,36 @@
             android:scaleType="centerCrop"
             android:src="@drawable/message_face" />
 
-        <TextView
-            android:id="@+id/recericed13"
-            android:layout_width="fill_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:paddingTop="5dp"
-            android:text="杨总\n下楼来挪一下你的车吧。"
-            android:textColor="@android:color/black"
-            android:layout_marginLeft="20dp"
-            android:gravity="center_vertical" />
+            android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/received101"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:paddingTop="5dp"
+                android:text="李经理"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical" />
+            <TextView
+                android:id="@+id/received1011"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:paddingTop="5dp"
+                android:text="项目进度如何，人手够不够..."
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                />
+        </LinearLayout>
 
     </LinearLayout>
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:weightSum="1">
@@ -454,109 +603,39 @@
             android:scaleType="centerCrop"
             android:src="@drawable/message_face" />
 
-        <TextView
-            android:id="@+id/recericed14"
-            android:layout_width="fill_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:paddingTop="5dp"
-            android:text="刘总\n王总说周末出去钓鱼，要不要一起..."
-            android:textColor="@android:color/black"
-            android:layout_marginLeft="20dp"
-            android:gravity="center_vertical" />
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/received102"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:paddingTop="5dp"
+                android:text="杨总"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical" />
+            <TextView
+                android:id="@+id/received1022"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:paddingTop="5dp"
+                android:text="周末的要进行招新的面试，..."
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                />
+        </LinearLayout>
 
 
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="1">
-
-        <ImageView
-            android:id="@+id/face15"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginTop="5dp"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            android:src="@drawable/message_face" />
-
-        <TextView
-            android:id="@+id/recericed15"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:paddingTop="5dp"
-            android:text="父亲\n你妈说想吃鱼，你请弟媳来做一顿..."
-            android:textColor="@android:color/black"
-            android:layout_marginLeft="20dp"
-            android:gravity="center_vertical" />
 
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="1">
 
-        <ImageView
-            android:id="@+id/face16"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginTop="5dp"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            android:src="@drawable/message_face" />
-
-        <TextView
-            android:id="@+id/recericed16"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:paddingTop="5dp"
-            android:text="儿子\n爸爸，我忘带钥匙了，先去奶奶家..."
-            android:textColor="@android:color/black"
-            android:layout_marginLeft="20dp"
-            android:gravity="center_vertical" />
-
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="1">
-
-        <ImageView
-            android:id="@+id/face17"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginTop="5dp"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            android:src="@drawable/message_face" />
-
-        <TextView
-            android:id="@+id/recericed17"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:paddingTop="5dp"
-            android:text="老婆\n下周家长会，我有空，你别担心了..."
-            android:textColor="@android:color/black"
-            android:layout_marginLeft="20dp"
-            android:gravity="center_vertical" />
-
-
-    </LinearLayout>
 </LinearLayout>
     </ScrollView>
 
