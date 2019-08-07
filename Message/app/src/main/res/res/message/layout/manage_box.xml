@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="10px" android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+
+    - <LinearLayout android:layout_width="match_parent"
+
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/offline"
+        android:layout_width="372dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"
+
+
+        android:text="草稿箱"
+
+        android:textSize="55dp" />
+
+
+
+
+
+</LinearLayout>
+    - <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/face1"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/message_face" />
+
+    <TextView
+        android:id="@+id/box1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="45sp"
+        android:paddingTop="5dp"
+        android:text="你好！"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="20dp"
+        android:gravity="center_vertical" />
+</LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/face2"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/message_face" />
+
+        <TextView
+            android:id="@+id/box2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="45sp"
+            android:paddingTop="5dp"
+            android:text="我的号码是XX"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/face3"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/message_face" />
+
+        <TextView
+            android:id="@+id/recericed3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="45sp"
+            android:paddingTop="5dp"
+            android:text="今天天气不错"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/face4"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/message_face" />
+
+        <TextView
+            android:id="@+id/recericed4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="45sp"
+            android:paddingTop="5dp"
+            android:text="今天要开会.."
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/face5"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/message_face" />
+
+        <TextView
+            android:id="@+id/box5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="45sp"
+            android:paddingTop="5dp"
+            android:text="等等我马上就到"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/face6"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/message_face" />
+
+        <TextView
+            android:id="@+id/recericed6"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="45sp"
+            android:paddingTop="5dp"
+            android:text="今晚吃什么呢？"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/face7"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/message_face" />
+
+        <TextView
+            android:id="@+id/recericed7"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:paddingTop="5dp"
+            android:text="大家好！"
+            android:textColor="@android:color/black"
+            android:textSize="45sp" />
+    </LinearLayout>
+
+
+    <LinearLayout android:layout_width="match_parent"
+        android:orientation="horizontal"
+
+        android:layout_height="100px">
+        <LinearLayout android:layout_width="wrap_content"
+            android:orientation="horizontal"
+
+            android:layout_height="100px">
+
+
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="right"
+            android:layout_height="100px">
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

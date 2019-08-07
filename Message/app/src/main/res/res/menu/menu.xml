@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/nv_message"
+        android:enabled="true"
+        android:icon="@android:drawable/sym_action_chat"
+        app:showAsAction="ifRoom"
+        android:title="消息"
+         />
+
+    <item
+        android:id="@+id/nv_address"
+        android:enabled="true"
+        android:icon="@android:drawable/ic_menu_my_calendar"
+        android:title="通讯录"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/nv_work"
+        android:enabled="true"
+        android:icon="@android:drawable/presence_online"
+        android:title="工作"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/nv_calendar"
+        android:enabled="true"
+        android:icon="@android:drawable/ic_menu_month"
+        android:title="日程"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/nv_my"
+        android:enabled="true"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:title="我的"
+        app:showAsAction="ifRoom" />
+
+</menu>

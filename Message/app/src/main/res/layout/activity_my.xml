@@ -4,7 +4,6 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <RelativeLayout
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp">
@@ -57,18 +56,17 @@
             android:layout_marginTop="85dp"
             android:text="职务：总监"
             android:textSize="20sp" />
-
     </RelativeLayout>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="我的邮箱："
-    android:textSize="20dp"
-    android:gravity="bottom"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的邮箱："
+            android:textSize="20dp"
+            android:gravity="bottom"/>
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -104,37 +102,6 @@
             android:layout_height="wrap_content"
             android:text="5楼505"/>
     </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="微信号："
-            android:textSize="20dp"
-            android:gravity="bottom"/>
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" @南飞的大雁"/>
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="微博："
-            android:textSize="20dp"
-            android:gravity="bottom"/>
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" @南飞的大雁1986"/>
-    </LinearLayout>
-
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -145,19 +112,18 @@
                 android:text="个性签名："
                 android:textSize="20dp"
                 android:gravity="bottom"/>
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="WSNGG NM$L"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WSNGG NM$L"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="50dp"></LinearLayout>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:orientation="horizontal" android:layout_width="match_parent"
-
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="58dp"
@@ -167,9 +133,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/wjj"
-            android:gravity="left|center"
-
-            />
+            android:gravity="left|center"/>
         <LinearLayout
             android:layout_width="120dp"
             android:layout_height="wrap_content"></LinearLayout>
@@ -179,9 +143,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/shez"
-
-        android:gravity="left|center"
-        />
+        android:gravity="left|center"/>
 </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
@@ -191,21 +153,17 @@
             android:layout_width="55dp"
             android:layout_height="wrap_content"></LinearLayout>
         <TextView
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="我的文档"
-            android:textSize="25dp"
-            />
+            android:textSize="25dp"/>
         <LinearLayout
             android:layout_width="130dp"
             android:layout_height="wrap_content"></LinearLayout>
         <TextView
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="设置"
-            android:textSize="25dp"
-            />
+            android:textSize="25dp"/>
     </LinearLayout>
 </LinearLayout>
