@@ -8,6 +8,8 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     defaultConfig {
+
+        vectorDrawables.useSupportLibrary = true
         applicationId "com.example.message"
         minSdkVersion 15
         targetSdkVersion 29

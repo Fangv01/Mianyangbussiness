@@ -1,153 +1,641 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="10px" android:orientation="vertical">
 
-    <ScrollView
-        android:id="@+id/scrollView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<LinearLayout
+    android:layout_width="match_parent" android:layout_height="match_parent" android:padding="10px" android:orientation="vertical">
+
+
+    -
+
+
+    <LinearLayout android:layout_width="match_parent"
+
+    android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/offline"
+            android:layout_width="372dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+
+
+            android:text=" 短信"
+
+            android:textColor="#000000"
+            android:textSize="30dp" />
+
+    <Button
+
+        android:id="@+id/box"
+        android:background="@drawable/message_box2"
+        android:layout_gravity="right"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+
+        android:textColor="#F7F7F7"
+
+        />
+    <TextView
+
+        android:id="@+id/none"
+
+        android:layout_gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="40dip"
+        android:text="      "
+        android:textColor="#F7F7F7"
+
+        />
+    <Button
+
+        android:id="@+id/send"
+        android:background="@drawable/message_send2"
+        android:layout_gravity="right"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+
+        android:textColor="#F7F7F7"
+
+        />
+
+
+</LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+
+        android:layout_height="wrap_content">
+
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:iconifiedByDefault="false"
+            android:queryHint="搜索信息"
+            />
+
+
+    </LinearLayout>
+
+
+    - <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/face1"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/message_face" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/received1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:paddingTop="5dp"
+        android:text="王总"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical" />
+    <TextView
+        android:id="@+id/received11"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:paddingTop="5dp"
+        android:text="这个月的财务报表好像出了..."
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        />
+</LinearLayout>
+
+</LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/face2"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/message_face" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical" >
-        </LinearLayout>
-    </ScrollView>
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    - <LinearLayout android:layout_width="match_parent"
-
-    android:layout_height="120px">
-
-    <TextView
-        android:id="@+id/offline"
-        android:layout_width="372dp"
-        android:layout_height="120px"
-        android:layout_weight="8"
-        android:background="@drawable/button_style"
-
-        android:text="已 接 收 短 信"
-        android:textColor="#F7F7F7"
-        android:textSize="25dp" />
-
-    <Button
-
-        android:id="@+id/received"
-        android:background="@drawable/button_style_circle"
-        android:layout_gravity="center_vertical"
-        android:layout_width="40dip"
-        android:layout_height="40dip"
-        android:text="+"
-        android:textColor="#F7F7F7"
-
-        />
-
-
-
-</LinearLayout>
-    - <LinearLayout android:layout_width="match_parent"
-
-    android:layout_height="400px">
-
-
-    <TextView
-        android:id="@+id/send_mss"
-        android:background="@drawable/button_style2"
-        android:layout_width="0px"
-        android:layout_height="400px"
-
-        android:layout_weight="3"
-        android:text="\我收到了A……\n\n我收到了B……\n\n我收到了C……"
-
-        android:textSize="18sp"
-
-        />
-
-</LinearLayout>
-    - <LinearLayout android:layout_width="match_parent"
-
-    android:layout_height="120px">
-
-    <TextView
-        android:id="@+id/offlin"
-        android:layout_width="366dp"
-        android:layout_height="120px"
-        android:layout_weight="8"
-        android:background="@drawable/button_style"
-
-        android:text="已 发 送 短 信"
-        android:textColor="#F7F7F7"
-        android:textSize="25dp" />
-
-    <Button
-
-        android:id="@+id/sended"
-        android:background="@drawable/button_style_circle"
-        android:layout_gravity="center_vertical"
-        android:layout_width="40dip"
-        android:layout_height="40dip"
-        android:text="+"
-        android:textColor="#F7F7F7"
-
-        />
-
-
-
-</LinearLayout>
-    - <LinearLayout android:layout_width="match_parent"
-
-    android:layout_height="400px">
-
-
-    <TextView
-        android:id="@+id/senda"
-        android:background="@drawable/button_style2"
-        android:layout_width="0px"
-        android:layout_height="400px"
-
-        android:layout_weight="3"
-        android:text="\n我发送了A……\n\n我发送了B……\n\n我发送了C……"
-
-        android:textSize="18sp"
-
-        />
-</LinearLayout>
-    <LinearLayout android:layout_width="match_parent"
-        android:orientation="horizontal"
-
-        android:layout_height="100px">
-        <LinearLayout android:layout_width="wrap_content"
-            android:orientation="horizontal"
-
-            android:layout_height="100px">
-
-
-            <Button
-
-                android:id="@+id/box"
-                android:background="@drawable/button_style"
-                android:layout_gravity="center_vertical"
-                android:layout_width="70dip"
-                android:layout_height="40dip"
-                android:text="草稿箱"
-                android:textColor="#F7F7F7"
+            <TextView
+                android:id="@+id/received2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:paddingTop="5dp"
+                android:text="李总"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical" />
+            <TextView
+                android:id="@+id/received22"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:paddingTop="5dp"
+                android:text="昨天王总找你核对报表了吗..."
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
                 />
-
-        </LinearLayout>
-        <LinearLayout android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:gravity="right"
-            android:layout_height="100px">
-
-
-            <Button
-
-                android:id="@+id/send"
-                android:layout_width="70dip"
-                android:layout_height="40dip"
-                android:layout_gravity="center_vertical"
-                android:background="@drawable/button_style"
-                android:text="发送短信"
-                android:textColor="#F7F7F7" />
-
         </LinearLayout>
     </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/face3"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/message_face" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/received3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:paddingTop="5dp"
+                android:text="李总"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical" />
+            <TextView
+                android:id="@+id/received33"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:paddingTop="5dp"
+                android:text="财务报表出现纰漏，是不是..."
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/face4"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/message_face" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/received4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:paddingTop="5dp"
+                android:text="张总"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical" />
+            <TextView
+                android:id="@+id/received44"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:paddingTop="5dp"
+                android:text="昨天的章我们核对上了，应..."
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/face5"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/message_face" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/received5"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:paddingTop="5dp"
+                android:text="杨总"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical" />
+            <TextView
+                android:id="@+id/received55"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:paddingTop="5dp"
+                android:text="公司要六周年庆了，我们可..."
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/face6"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/message_face" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/received6"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:paddingTop="5dp"
+                android:text="王总"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical" />
+            <TextView
+                android:id="@+id/received66"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:paddingTop="5dp"
+                android:text="出国培训的资金是谁在管啊..."
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/face7"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="10dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/message_face" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/received7"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:paddingTop="5dp"
+                android:text="林总"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical" />
+            <TextView
+                android:id="@+id/received77"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:paddingTop="5dp"
+                android:text="六周年晚上咱们可以去那家..."
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/face9"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/message_face" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/received8"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:paddingTop="5dp"
+                android:text="张总"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical" />
+            <TextView
+                android:id="@+id/received88"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:paddingTop="5dp"
+                android:text="SE那家我联系过了，时间定..."
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/face8"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/message_face" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/received9"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:paddingTop="5dp"
+                android:text="老婆"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical" />
+            <TextView
+                android:id="@+id/received99"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:paddingTop="5dp"
+                android:text="今天你去接一下孩子哈，我..."
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/face11"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/message_face" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/received10"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:paddingTop="5dp"
+                android:text="林总"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical" />
+            <TextView
+                android:id="@+id/received100"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:paddingTop="5dp"
+                android:text="今晚陪我去那个酒店一起参..."
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/face13"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/message_face" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/received101"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:paddingTop="5dp"
+                android:text="李经理"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical" />
+            <TextView
+                android:id="@+id/received1011"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:paddingTop="5dp"
+                android:text="项目进度如何，人手够不够..."
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/face14"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/message_face" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/received102"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:paddingTop="5dp"
+                android:text="杨总"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical" />
+            <TextView
+                android:id="@+id/received1022"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:paddingTop="5dp"
+                android:text="周末的要进行招新的面试，..."
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
 </LinearLayout>
+    </ScrollView>
+

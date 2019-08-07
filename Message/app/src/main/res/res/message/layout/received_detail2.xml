@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="10px" android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout android:layout_width="match_parent"
+        android:orientation="horizontal"
+
+        android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="wrap_content"
+            android:orientation="horizontal"
+
+            android:layout_height="100px">
+
+
+
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content"
+            android:orientation="horizontal"
+
+            android:layout_height="100px">
+
+
+
+            <TextView
+
+                android:id="@+id/name"
+
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="刘总："
+                android:textSize="20dp"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="right"
+            android:layout_height="100px">
+
+
+            <Button
+
+                android:id="@+id/delete"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/message_delete"
+
+                android:textColor="#F7F7F7" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/senda"
+
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="3"
+            android:text="\n昨天王总找你核对报表了吗，我看了看，应该是小吴他们出国培训那部分钱忘了算了，你和王总查出来了吗？\n"
+
+            android:textSize="18sp"
+
+            />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:orientation="horizontal"
+
+        android:layout_height="100px">
+
+        <LinearLayout android:layout_width="wrap_content"
+            android:orientation="horizontal"
+
+            android:layout_height="100px">
+
+
+            <TextView
+
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="40dip"
+                android:layout_gravity="center_vertical"
+
+                android:text="8月1日"
+                />
+
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="right"
+            android:layout_height="100px">
+
+
+            <Button
+                android:id="@+id/answer"
+                android:background="@drawable/message_send"
+                android:layout_gravity="right"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:text="+"
+                android:textColor="#F7F7F7"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

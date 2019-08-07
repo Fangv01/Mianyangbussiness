@@ -22,7 +22,7 @@ public class Message_Send extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.snd_mss);
         mcontext=this;
-        findViewById(R.id.send_mss).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.snd_mss).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(mcontext,"已发送",Toast.LENGTH_LONG).show();

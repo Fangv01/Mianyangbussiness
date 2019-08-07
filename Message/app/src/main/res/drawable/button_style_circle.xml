@@ -6,7 +6,7 @@
     android:shape="oval">
 
     <!-- 填充的颜色 -->
-    <solid android:color="#395BE9" />
+    <solid android:color="#63D667" />
 
 
     <!-- 设置按钮的四个角为弧形 -->

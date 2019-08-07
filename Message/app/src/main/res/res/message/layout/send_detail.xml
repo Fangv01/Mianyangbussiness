@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="10px" android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout android:layout_width="match_parent"
+        android:orientation="horizontal"
+
+        android:layout_height="100px">
+
+        <LinearLayout android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="right"
+            android:layout_height="100px">
+
+
+            <Button
+
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="40dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/button_style"
+                android:text="删除"
+                android:textColor="#F7F7F7" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/senda"
+            android:background="@drawable/button_style2"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="3"
+            android:text="\n我发送了A，小明收到了A，并且再次向我发送A，我收到了A\n"
+
+            android:textSize="18sp"
+
+            />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:orientation="horizontal"
+
+        android:layout_height="100px">
+        <LinearLayout android:layout_width="wrap_content"
+            android:orientation="horizontal"
+
+            android:layout_height="100px">
+
+
+            <Button
+
+                android:id="@+id/sender"
+                android:background="@drawable/button_style2"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收件人：小明"
+
+                />
+
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="right"
+            android:layout_height="100px">
+
+
+            <Button
+
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="40dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/button_style2"
+                android:text="发送时间：8月1日"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
