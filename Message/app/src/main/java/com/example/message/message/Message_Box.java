@@ -14,11 +14,27 @@ public class Message_Box extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.manage_box);
-        findViewById(R.id.sended1).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.box1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent1=new Intent();
                 intent1.setClass(Message_Box.this,Box_Detail.class);
+                startActivity(intent1);
+            }
+        });
+        findViewById(R.id.box2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1=new Intent();
+                intent1.setClass(Message_Box.this,Box_Detail2.class);
+                startActivity(intent1);
+            }
+        });
+        findViewById(R.id.box5).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1=new Intent();
+                intent1.setClass(Message_Box.this,Box_Detail5.class);
                 startActivity(intent1);
             }
         });

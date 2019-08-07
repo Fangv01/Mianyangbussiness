@@ -74,7 +74,7 @@
             android:layout_gravity="bottom"
             android:layout_weight="8"
             android:gravity="top"
-            android:text="你好！"
+            android:text="我的号码是XXX"
 
             android:textSize="27sp" />
 

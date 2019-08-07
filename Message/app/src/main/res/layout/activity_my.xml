@@ -2,8 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
     <RelativeLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp">
@@ -15,46 +16,195 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="56dp"
-            android:layout_marginLeft="64dp"
-            android:layout_marginTop="64dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
             android:src="@drawable/userimage" />
         <TextView
+            android:id="@+id/昵称"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="160dp"
+            android:layout_marginLeft="77dp"
+            android:layout_marginTop="40dp"
+            android:text="我的昵称："
+            android:textSize="25sp" />
+        <EditText
             android:id="@+id/username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/imageView"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_marginStart="77dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="275dp"
             android:layout_marginLeft="77dp"
-            android:layout_marginTop="9dp"
-            android:text="user"
-            android:textSize="36sp" />
+            android:layout_marginTop="30dp"
+            android:text="小唐"
+            android:textSize="25sp" />
         <TextView
-            android:id="@+id/info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="21dp"
-            android:layout_toRightOf="@+id/imageView"
-            android:text="info"
-            android:textSize="24sp" />
-    </RelativeLayout>
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="160dp"
+            android:layout_marginLeft="77dp"
+            android:layout_marginTop="85dp"
+            android:text="职务：总监"
+            android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/my_document"
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="left|center"
-        android:drawableLeft="@android:drawable/sym_contact_card"
-        android:text="我的文档" />
+        android:layout_height="wrap_content">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="我的邮箱："
+    android:textSize="20dp"
+    android:gravity="bottom"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4396changzhang@163.com"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的电话："
+            android:textSize="20dp"
+            android:gravity="bottom"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13898749728"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="办公室："
+            android:textSize="20dp"
+            android:gravity="bottom"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5楼505"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="微信号："
+            android:textSize="20dp"
+            android:gravity="bottom"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" @南飞的大雁"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="微博："
+            android:textSize="20dp"
+            android:gravity="bottom"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" @南飞的大雁1986"/>
+    </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="个性签名："
+                android:textSize="20dp"
+                android:gravity="bottom"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WSNGG NM$L"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"></LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal" android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="58dp"
+            android:layout_height="wrap_content"></LinearLayout>
+        <Button
+            android:id="@+id/my_document"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/wjj"
+            android:gravity="left|center"
+
+            />
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"></LinearLayout>
 
     <Button
         android:id="@+id/setting"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableLeft="@android:drawable/ic_menu_manage"
+        android:drawableLeft="@drawable/shez"
+
         android:gravity="left|center"
-        android:text="设置" />
+        />
+</LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"></LinearLayout>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的文档"
+            android:textSize="25dp"
+            />
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"></LinearLayout>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置"
+            android:textSize="25dp"
+            />
+    </LinearLayout>
 </LinearLayout>

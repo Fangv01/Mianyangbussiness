@@ -26,7 +26,6 @@
             >
             <EditText
                 android:id="@+id/recver_number"
-                android:background="@drawable/button_style2"
                 android:layout_width="wrap_content"
                 android:layout_weight="1"
                 android:hint="在此输入收信人号码"
@@ -45,12 +44,12 @@
 
             <Button
                 android:id="@+id/saveintobox"
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="match_parent"
 
-                android:background="@drawable/button_style"
+                android:background="@drawable/message_box"
 
-                android:text="存至草稿箱"
+
                 android:textColor="#F7F7F7"
                 />
 
@@ -65,7 +64,7 @@
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:gravity="top"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <EditText
             android:id="@+id/mss"
@@ -75,18 +74,18 @@
             android:layout_gravity="bottom"
             android:layout_weight="8"
             android:gravity="top"
-            android:hint="在此编辑短信内容"
+            android:hint="在此编辑短信内容     "
 
             android:textSize="27sp" />
 
         <Button
             android:id="@+id/snd_mss"
-            android:background="@drawable/button_style"
-            android:layout_width="15dp"
+            android:background="@drawable/message_send2"
+            android:layout_width="5px"
 
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:text="发送短信"
+            android:layout_height="115px"
+            android:layout_weight="1"
+
             android:textColor="#F7F7F7"
             android:textSize="15sp"
 
