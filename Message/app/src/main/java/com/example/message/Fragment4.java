@@ -16,12 +16,16 @@ import androidx.annotation.RequiresApi;
 import com.example.message.calendar.CalendarAdapter;
 import com.example.message.calendar.CalendarBean;
 import com.example.message.calendar.CalendarDateView;
+import com.example.message.calendar.CalendarEvent;
+import com.example.message.calendar.CalendarEventAdapter;
 import com.example.message.calendar.CalendarScheduleActivity;
 import com.example.message.calendar.CalendarUtil;
 import com.example.message.calendar.CalendarView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -39,6 +43,9 @@ public class Fragment4 extends Fragment {
     ListView mList;
     @BindView(R.id.fab_add)
     FloatingActionButton floatingActionButton;
+
+    private List<CalendarEvent> calendarEvent ;
+    private CalendarEventAdapter adapter;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View view=inflater.inflate(R.layout.activity_calendar,container,false);
@@ -89,37 +96,15 @@ public class Fragment4 extends Fragment {
         int[] data = CalendarUtil.getYMD(new Date());
         mTitle.setText(data[0] + "/" + data[1] + "/" + data[2]);
 
-        mList.setAdapter(new BaseAdapter() {
-            @Override
-            public int getCount() {
-                return 100;
-            }
-
-            @Override
-            public Object getItem(int position) {
-                return null;
-            }
-
-            @Override
-            public long getItemId(int position) {
-                return 0;
-            }
-
-            @RequiresApi(api = Build.VERSION_CODES.M)
-            @Override
-            public View getView(int position, View convertView, ViewGroup parent) {
-                if (convertView == null) {
-
-
-                    convertView = LayoutInflater.from(parent.getContext()).inflate(android.R.layout.simple_list_item_multiple_choice, null);
-                }
-
-                TextView textView = (TextView) convertView;
-                textView.setText("item" + position);
-
-                return convertView;
-            }
-        });
+       // String str = (String) getArguments().getString("str");
+        calendarEvent = new ArrayList<CalendarEvent>();
+        calendarEvent.add(new CalendarEvent("小组会议",R.drawable.cal_dot));
+        calendarEvent.add(new CalendarEvent("部门会议",R.drawable.cal_dot));
+        calendarEvent.add(new CalendarEvent("小组会议",R.drawable.cal_dot));
+        calendarEvent.add(new CalendarEvent("部门会议",R.drawable.cal_dot));
+        //calendarEvent.add(new CalendarEvent("ssss",R.drawable.cal_dot));
+        adapter = new CalendarEventAdapter(getActivity(), calendarEvent);
+        mList.setAdapter(adapter);
 
         //跳转到下一活动
         Intent intent = new Intent(getActivity(), CalendarScheduleActivity.class);

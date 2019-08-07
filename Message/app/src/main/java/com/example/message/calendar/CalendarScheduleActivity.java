@@ -2,18 +2,26 @@ package com.example.message.calendar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.message.R;
+import com.example.message.SecondActivity;
 import com.example.message.calendar.CalendarCustomDatePicker;
 import com.example.message.calendar.CalendarDateFormatUtils;
+
+import butterknife.BindView;
 
 public class CalendarScheduleActivity extends AppCompatActivity implements View.OnClickListener{
     private TextView  mTvSelectedTime1,mTvSelectedTime2;
     private CalendarCustomDatePicker mTimerPicker1,mTimerPicker2;
+    @BindView(R.id.et_content)
+    EditText et_content;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +38,16 @@ public class CalendarScheduleActivity extends AppCompatActivity implements View.
         button.setOnClickListener(view -> finish());
 
         Button button2 = (Button) findViewById(R.id.btn_complete);
-        button2.setOnClickListener(view -> finish());
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                    //String event = et_content.getText().toString();
+                    Intent intent = new Intent(CalendarScheduleActivity.this, SecondActivity.class);
+                    intent.putExtra("id", 4);
+                    intent.putExtra("content", "schedule");
+                    startActivityForResult(intent, 10);
+            }
+        });
     }
 
     @Override
@@ -47,7 +64,6 @@ public class CalendarScheduleActivity extends AppCompatActivity implements View.
                 break;
         }
     }
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -56,8 +72,8 @@ public class CalendarScheduleActivity extends AppCompatActivity implements View.
 
 
     private void initTimerPicker1() {
-        String beginTime = "2018-10-17 18:00";
-        String endTime = CalendarDateFormatUtils.long2Str(System.currentTimeMillis(), true);
+        String beginTime = CalendarDateFormatUtils.long2Str(System.currentTimeMillis(), true);
+        String endTime = "2020-10-10 10:00";
 
         mTvSelectedTime1.setText(endTime);
 
@@ -79,8 +95,8 @@ public class CalendarScheduleActivity extends AppCompatActivity implements View.
     }
 
     private void initTimerPicker2() {
-        String beginTime = "2018-10-10 10:00";
-        String endTime = CalendarDateFormatUtils.long2Str(System.currentTimeMillis(), true);
+        String beginTime = CalendarDateFormatUtils.long2Str(System.currentTimeMillis(), true);
+        String endTime = "2020-10-10 10:00";
 
         mTvSelectedTime2.setText(endTime);
 

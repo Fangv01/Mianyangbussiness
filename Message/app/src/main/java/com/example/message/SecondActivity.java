@@ -3,6 +3,7 @@ package com.example.message;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.MenuItem;
@@ -60,9 +61,25 @@ public class SecondActivity extends Activity {
         navigationView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener);
     }
 
+
     @Override
-    public void onStart(){
-        super.onStart();
+    public void onResume(){/*
+        //calendar list
+        int id = getIntent().getIntExtra("id",4);
+        if(id == 4){
+            Intent intent = getIntent();
+            String event = intent.getStringExtra("content");
+            Fragment4 fragment4 = new Fragment4();
+            Bundle bundle = new Bundle();
+            bundle.putString("str",event);
+            fragment4.setArguments(bundle);
+
+            getFragmentManager().beginTransaction()
+                    .replace(R.id.content,fragment4)
+                    .addToBackStack(null)
+                    .commit();
+        }*/
+        super.onResume();
     }
     private long exitTime = 0;
     @Override
