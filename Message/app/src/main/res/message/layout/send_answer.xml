@@ -28,7 +28,7 @@
                 android:id="@+id/recver_number"
                 android:layout_width="wrap_content"
                 android:layout_weight="1"
-                android:hint="在此处键入联系人号码"
+                android:hint="王总："
                 android:layout_height="wrap_content"/>
 
         </LinearLayout>
@@ -74,7 +74,7 @@
             android:layout_gravity="bottom"
             android:layout_weight="8"
             android:gravity="top"
-            android:text="你好！"
+            android:hint="在此编辑短信内容     "
 
             android:textSize="27sp" />
 
