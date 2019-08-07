@@ -40,11 +40,12 @@
         android:layout_height="wrap_content">
 
         <SearchView
-            android:id="@+id/search_bar"
+            android:id="@+id/searchView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </SearchView>
+            android:layout_height="wrap_content"
+            android:iconifiedByDefault="false"
+            android:queryHint="搜索联系人"
+            />
     </LinearLayout>
 
     <ListView
