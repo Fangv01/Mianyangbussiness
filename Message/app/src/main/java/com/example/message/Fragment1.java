@@ -11,6 +11,7 @@ import com.example.message.message.Message_Box;
 import com.example.message.message.Message_Send;
 import com.example.message.message.Received_Detail;
 import com.example.message.message.Received_Detail2;
+import com.example.message.message.Received_Detail9;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +35,7 @@ public class Fragment1 extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent1=new Intent();
-                intent1.setClass(getActivity(), Received_Detail.class);
+                intent1.setClass(getActivity(), Received_Detail2.class);
                 startActivity(intent1);
             }
         });
@@ -42,7 +43,7 @@ public class Fragment1 extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent1=new Intent();
-                intent1.setClass(getActivity(), Received_Detail2.class);
+                intent1.setClass(getActivity(), Received_Detail9.class);
                 startActivity(intent1);
             }
         });

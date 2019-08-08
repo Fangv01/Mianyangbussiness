@@ -14,7 +14,7 @@ public class Received_Detail2 extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.received_detail);
+        setContentView(R.layout.received_detail2);
         mcontext=this;
         findViewById(R.id.answer).setOnClickListener(new View.OnClickListener() {
             @Override

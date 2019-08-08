@@ -55,12 +55,8 @@ public class SecondActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-        setDefaultFragment();
-        BottomNavigationView navigationView = findViewById(R.id.navigation);
-        navigationView.setSelectedItemId(R.id.nv_work);
-        navigationView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener);
+        setFragment(3);
     }
-
 
     @Override
     public void onResume(){/*
@@ -95,11 +91,20 @@ public class SecondActivity extends Activity {
      }
     private FragmentTransaction transaction;
     private FragmentManager fragmentManager;
-    private void setDefaultFragment(){
+    public void setFragment(int i ){
         fragmentManager=getFragmentManager();
         transaction=fragmentManager.beginTransaction();
-        transaction.replace(R.id.content,new Fragment3());
+        BottomNavigationView navigationView = findViewById(R.id.navigation);
+        switch (i){
+            case 1:transaction.replace(R.id.content,new Fragment1());navigationView.setSelectedItemId(R.id.nv_message);break;
+            case 2:transaction.replace(R.id.content,new Fragment2());navigationView.setSelectedItemId(R.id.nv_address);break;
+            case 3:transaction.replace(R.id.content,new Fragment3());navigationView.setSelectedItemId(R.id.nv_work);break;
+            case 4:transaction.replace(R.id.content,new Fragment4());navigationView.setSelectedItemId(R.id.nv_calendar);break;
+            case 5:transaction.replace(R.id.content,new Fragment5());navigationView.setSelectedItemId(R.id.nv_my);break;
+            default:break;
+        }
         transaction.commit();
+        navigationView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener);
     }
 
 

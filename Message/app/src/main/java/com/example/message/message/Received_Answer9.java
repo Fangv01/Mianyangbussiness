@@ -13,7 +13,7 @@ public class Received_Answer9 extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.send_answer);
+        setContentView(R.layout.send_answer9);
         mcontext=this;
         findViewById(R.id.snd_mss).setOnClickListener(new View.OnClickListener() {
             @Override

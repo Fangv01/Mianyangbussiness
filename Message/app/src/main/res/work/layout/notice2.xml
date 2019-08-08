@@ -6,22 +6,25 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="306dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="49dp"
-        android:layout_marginLeft="49dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginRight="60dp"
-        android:text="\t\t\t\t经公司领导研究决定，为使各部门每周较好的交流各自进度，请各位同仁于每周五下午进行周常进度报告会，不得缺席，如有紧急情况需向考勤部门提交相应请假材料。\n"
-        android:textSize="24sp" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="\t\t\t\t\t\t经公司领导研究决定，为使各部门每周较好的交流各自进度，请各位同仁于每周五下午进行周常进度报告会，不得缺席，如有紧急情况需向考勤部门提交相应请假材料。\n"
+        android:textSize="22sp"
+        android:textColor="#393939"/>
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="141dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="218dp"
-        android:layout_marginLeft="218dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="6dp"
         android:gravity="right"
-        android:text="公司人事行政部 " />
+        android:text="公司人事行政部 "
+        android:textSize="18dp"
+        android:textColor="#393939"/>
 </LinearLayout>

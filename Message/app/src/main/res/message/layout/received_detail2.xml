@@ -28,7 +28,7 @@
         </LinearLayout>
         <LinearLayout android:layout_width="wrap_content"
             android:orientation="horizontal"
-
+            android:layout_gravity="center_vertical"
             android:layout_height="100px">
 
             <Button
@@ -38,17 +38,17 @@
                 android:layout_gravity="center_vertical"
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/message_back"
+                android:background="@drawable/back"
                 />
 
             <TextView
 
                 android:id="@+id/name"
-
+                android:gravity="center_vertical"
                 android:layout_gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="刘总："
+                android:text="                            李总"
                 android:textSize="20dp"
                 />
 
@@ -63,19 +63,19 @@
             <Button
 
                 android:id="@+id/delete"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/message_delete"
 
                 android:textColor="#F7F7F7" />
             <Button
                 android:id="@+id/answer"
-                android:background="@drawable/message_send"
+                android:background="@drawable/add_contact"
                 android:layout_gravity="right"
                 android:layout_width="40dip"
                 android:layout_height="40dip"
-                android:text="+"
+
                 android:textColor="#F7F7F7"
                 />
         </LinearLayout>

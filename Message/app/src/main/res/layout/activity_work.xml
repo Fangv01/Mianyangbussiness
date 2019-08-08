@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="10dp"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
-    android:layout_marginBottom="10dp"
+
     >
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="工作"
-        android:layout_marginLeft="10dp"
+        android:layout_height="54dp"
+        android:text="\t\t工作"
+
         android:gravity="center_vertical"
-        android:textColor="#000000"
+        android:textColor="#393939"
         android:textSize="30dp" />
 
     <androidx.viewpager.widget.ViewPager
@@ -27,8 +23,9 @@
         <androidx.viewpager.widget.PagerTabStrip
             android:id="@+id/tab"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom" />
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            />
 
     </androidx.viewpager.widget.ViewPager>
 
@@ -37,19 +34,19 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
         android:layout_gravity="center"
-        >
+        android:background="@drawable/edit_sharp">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="6dp"
             >
             <ImageView
                 android:id="@+id/png1"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="10dp"
                 android:layout_centerVertical="true"
                 android:src="@drawable/notice0"
                 />
@@ -59,56 +56,68 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="公告"
-                android:layout_marginLeft="35dp"
-                android:textColor="#000000"
-                android:textSize="30dp" />
+                android:layout_marginLeft="45dp"
+                android:textColor="#B3000000"
+                android:textSize="26dp" />
         </RelativeLayout>
 
 
         <TextView
             android:id="@+id/notice1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="32dp"
             android:layout_gravity="center"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="5dp"
             android:gravity="center_vertical"
-            android:text="@string/notice1" />
+            android:layout_marginLeft="15dp"
+
+            android:text="@string/notice1"
+            android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/notice2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="32dp"
             android:layout_gravity="center"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="2dp"
             android:gravity="center_vertical"
+            android:layout_marginLeft="15dp"
 
+            android:textSize="18sp"
             android:text="@string/notice2" />
 
         <TextView
             android:id="@+id/notice3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="32dp"
             android:layout_gravity="center"
             android:gravity="center_vertical"
-            android:layout_marginTop="3dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="18sp"
+            android:layout_marginTop="2dp"
             android:text="@string/notice3" />
 
         <TextView
             android:id="@+id/notice4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="32dp"
             android:layout_gravity="center"
             android:gravity="center_vertical"
-            android:layout_marginTop="3dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="2dp"
+            android:textSize="18sp"
             android:text="@string/notice4" />
 
         <TextView
             android:id="@+id/notice5"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="32dp"
             android:layout_gravity="center"
             android:gravity="center_vertical"
-            android:layout_marginTop="3dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="4dp"
+            android:textSize="18sp"
             android:text="@string/notice5" />
     </LinearLayout>
 </LinearLayout>

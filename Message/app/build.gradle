@@ -10,7 +10,7 @@ android {
     defaultConfig {
 
         vectorDrawables.useSupportLibrary = true
-        applicationId "com.example.message"
+        applicationId 'com.example.message'
         minSdkVersion 15
         targetSdkVersion 29
         versionCode 1
