@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MianyangBussiness</string>
+    <string name="app_name">绵羊移动办公</string>
     <string name="hello_world">Main Activity</string>
     <string name="search_hint">Search in contacts</string>
     <string name="title_activity_add_contact">Add Contact</string>
