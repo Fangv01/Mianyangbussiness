@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="移动办公系统"
-            android:textColor="@color/colorAccent"
+            android:textColor="#000"
             android:textSize="40dp"
             android:gravity="center_horizontal"/>
     </LinearLayout>
@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="姓名"
-            android:textColor="@color/colorAccent"
+            android:textColor="#000"
             android:textSize="25dp"/>
 
         <EditText
@@ -48,7 +48,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="5"
-            android:textColor="@color/colorAccent"
+            android:textColor="#515151"
             android:textSize="22sp" />
     </LinearLayout>
 
@@ -65,11 +65,11 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="密码"
-            android:textColor="@color/colorAccent"
+            android:textColor="#000"
             android:textSize="25dp"/>
 
         <EditText
-            android:textColor="@color/colorAccent"
+            android:textColor="#515151"
             android:id="@+id/login_password"
             android:layout_width="0dp"
             android:layout_weight="5"
@@ -97,7 +97,7 @@
 
 
     <LinearLayout
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="170dp"
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -107,7 +107,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="用户注册"
-            android:textColor="@color/colorAccent"
+            android:textColor="#515151"
             android:background="@color/colorNone"/>
     </LinearLayout>
 

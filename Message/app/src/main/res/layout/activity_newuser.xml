@@ -27,7 +27,7 @@
             android:gravity="right"
             android:layout_weight="5.5"
             android:text="用户注册"
-            android:textColor="@color/colorAccent"
+            android:textColor="#000"
             android:textSize="40dp" />
 
 
@@ -50,13 +50,13 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="姓名"
-            android:textColor="@color/colorAccent"
+            android:textColor="#000"
             android:textSize="25dp"/>
 
         <EditText
             android:id="@+id/newlogin_name"
             android:layout_width="0dp"
-            android:textColor="@color/colorAccent"
+            android:textColor="#515151"
             android:layout_weight="5"
             android:layout_height="match_parent"
             android:textSize="22sp"/>
@@ -75,13 +75,13 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="电话"
-            android:textColor="@color/colorAccent"
+            android:textColor="#000"
             android:textSize="25dp"/>
 
         <EditText
             android:id="@+id/newlogin_number"
             android:layout_width="0dp"
-            android:textColor="@color/colorAccent"
+            android:textColor="#515151"
             android:layout_weight="5"
             android:layout_height="match_parent"
             android:textSize="22sp" />
@@ -100,11 +100,11 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="密码"
-            android:textColor="@color/colorAccent"
+            android:textColor="#000"
             android:textSize="25dp"/>
 
         <EditText
-            android:textColor="@color/colorAccent"
+            android:textColor="#515151"
             android:id="@+id/newlogin_password"
             android:layout_width="0dp"
             android:layout_weight="5"
@@ -124,12 +124,12 @@
             android:background="@color/colorNone"
             android:layout_marginRight="20dp"
             android:text="完成"
-            android:textColor="@color/colorAccent"
+            android:textColor="#515151"
             android:textSize="25dp"/>
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="150dp"
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -139,7 +139,7 @@
             android:layout_height="wrap_content"
             android:text="移动办公系统"
             android:textSize="15dp"
-            android:textColor="@color/colorAccent"
+            android:textColor="#000"
             android:background="@color/colorNone"/>
     </LinearLayout>
 
